@@ -6,15 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "start-stub-server": "json-server --watch stub-server/db.json --port 3004"
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "json-server": "^0.17.1",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
