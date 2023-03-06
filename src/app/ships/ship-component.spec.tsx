@@ -1,14 +1,26 @@
+import { SpaceShip } from '@/domain/space-ship';
 import { render, screen } from '@testing-library/react';
 import { it, describe, expect } from "vitest";
+import '@testing-library/jest-dom/extend-expect'
 
-import {Ship} from './ship-component';
+import {ShipComponent} from './ship-component';
 
-describe('App', () => {
-  it('renders headline', () => {
-    render(<Ship />);
+describe('Ship', () => {
+  it('renders price', () => {
+    const ship: SpaceShip = {
+      name: "XV-1 Turbo Alpha",
+      price: 50_000,
+      location: "Ganymed",
+      image: "/ship1.jpg",
+      mileage: 1000,
+      speed: 500,
+      constructionYear: 3451,
+    };
 
-    screen.debug();
+    const {getByTestId} = render(<ShipComponent ship={ship}/>);
 
-    // check if App components renders headline
+    // screen.debug();
+
+    expect(getByTestId("ship-price")).toHaveTextContent("50000")
   });
 });
