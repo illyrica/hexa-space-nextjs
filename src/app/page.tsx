@@ -1,17 +1,13 @@
+import Link from 'next/link'
 import styles from './page.module.css'
 
-async function getData() {
-    const res = await fetch('http://localhost:3000/api/hello');
-    return res.json();
 
-}
 
 export default async function Home() {
-const apiData = await getData()
-
-  return (
-    <main className={styles.main}>
-      {apiData.name}
-    </main>
-  )
-}
+    return (
+      <main className={styles.main}>
+        <h1>Welcome to Hexa Space Inc.</h1>
+        <p>Browse our our collection of fine <Link href={{pathname: "/ships"}}>space ships</Link></p>
+      </main>
+    )
+  }
