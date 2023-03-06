@@ -17,10 +17,10 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => <>
     <li><b>Price</b>:
       <span data-testid="ship-price">{ship.price}</span>
     </li>
-    <li><b>Location</b>: string</li>
-    <li><b>Mileage</b>: number</li>
-    <li><b>Speed</b>: number LY/sec</li>
-    <li><b>Built</b>: number</li>
+    <li><b>Location</b>: {ship.location}</li>
+    <li><b>Mileage</b>: {ship.mileage}</li>
+    <li><b>Speed</b>: {ship.speed} LY/sec</li>
+    <li><b>Built</b>: {ship.constructionYear}</li>
   </ul>
   </div>
 </>

@@ -14,7 +14,15 @@ export default async function Ships() {
 
   return (
     <main className={styles.main}>
-      <ShipComponent />
+      <ShipComponent ship={{
+        name: "XV-1 Turbo Alpha",
+        price: 50_000,
+        location: "Ganymed",
+        image: "/ship1.jpg",
+        mileage: 1000,
+        speed: 500,
+        constructionYear: 3451,
+      }}/>
     </main>
   )
 }
