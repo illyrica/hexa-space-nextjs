@@ -8,7 +8,7 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => <>
     <Image
       src={ship1}
       height={200}
-      width={300}
+      width={250}
       alt="Space Ship 1"
     />
     <p>Ship Alpha-1</p>
