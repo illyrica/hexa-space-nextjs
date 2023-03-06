@@ -7,3 +7,6 @@ export type SpaceShip = {
   speed: number;
   constructionYear: number;
 };
+
+export const monthlyRate = (ship: SpaceShip, durationInMonth: number): number =>
+  (ship.price / durationInMonth) * 1.1;
