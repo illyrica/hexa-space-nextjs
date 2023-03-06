@@ -6,7 +6,8 @@ export const Ship = () => <>
   <div>
     <Image
       src={ship1}
-      height={300}
+      height={200}
+      width={300}
       alt="Space Ship 1"
     />
     <p>Ship Alpha-1</p>
