@@ -1,6 +1,6 @@
 import { times } from 'remeda';
 import { SpaceShip } from '@/ship-list/domain/space-ship';
-import { ShipComponent } from '@/ship-list/ui/ship-component';
+import { ShipComponent } from '@/ship-list/ui-adapter/ship-component';
 import styles from '../page.module.css';
 
 async function getData() {
