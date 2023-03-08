@@ -1,0 +1,53 @@
+{
+  "inYard": [
+    {
+      "creds": 50000,
+      "location": "Ganymed",
+      "image": "/ship1.jpg",
+      "mileage": 1000,
+      "constructionYear": 3451
+    },
+    {
+      "creds": 50000,
+      "location": "Ganymed",
+      "image": "/ship1.jpg",
+      "mileage": 1000,
+      "constructionYear": 3451
+    },
+    {
+      "creds": 50000,
+      "location": "Ganymed",
+      "image": "/ship1.jpg",
+      "mileage": 1000,
+      "constructionYear": 3451
+    },
+    {
+      "creds": 50000,
+      "location": "Ganymed",
+      "image": "/ship1.jpg",
+      "mileage": 1000,
+      "constructionYear": 3451
+    },
+    {
+      "creds": 50000,
+      "location": "Ganymed",
+      "image": "/ship1.jpg",
+      "mileage": 1000,
+      "constructionYear": 3451
+    }
+  ],
+  "catalogue": [
+    {
+      "name": "XV-1 Turbo Alpha",
+      "image": "/ship1.jpg",
+      "speed": 500,
+      "constructionYear": 3451
+    },
+    {
+      "name": "Y3 Beta",
+      "image": "/ship1.jpg",
+      "speed": 100,
+      "constructionYear": 3401
+    }
+  ]
+}

@@ -1,10 +1,10 @@
-import { SpaceShip } from '@/domain/space-ship';
 import { times } from 'remeda';
-import styles from '../page.module.css';
+import { SpaceShip } from '@/domain/space-ship';
 import { ShipComponent } from './ship-component';
+import styles from '../page.module.css';
 
 async function getData() {
-    const res = await fetch('http://localhost:3000/api/hello',  { cache: 'no-store' });
+    const res = await fetch('http://localhost:3000/api/inYard',  { cache: 'no-store' });
     return res.json();
 }
 
