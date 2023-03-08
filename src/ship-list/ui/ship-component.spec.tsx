@@ -1,4 +1,4 @@
-import { SpaceShip } from '@/domain/space-ship';
+import { SpaceShip } from '@/ship-list/domain/space-ship';
 import { render, screen } from '@testing-library/react';
 import { it, describe, expect } from "vitest";
 import '@testing-library/jest-dom/extend-expect'

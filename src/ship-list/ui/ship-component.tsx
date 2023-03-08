@@ -1,4 +1,4 @@
-import { SpaceShip } from '@/domain/space-ship';
+import { SpaceShip } from '@/ship-list/domain/space-ship';
 import Image from 'next/image';
 import ship1 from "../../../public/images/ship1.jpeg"
 
