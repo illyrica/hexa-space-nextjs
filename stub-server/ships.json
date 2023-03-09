@@ -40,14 +40,12 @@
     {
       "name": "XV-1 Turbo Alpha",
       "image": "/ship1.jpg",
-      "speed": 500,
-      "constructionYear": 3451
+      "speed": 500
     },
     {
       "name": "Y3 Beta",
       "image": "/ship1.jpg",
-      "speed": 100,
-      "constructionYear": 3401
+      "speed": 100
     }
   ]
 }
