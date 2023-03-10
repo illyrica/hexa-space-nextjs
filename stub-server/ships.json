@@ -38,14 +38,84 @@
   ],
   "catalogue": [
     {
-      "name": "XV-1 Turbo Alpha",
-      "image": "/ship1.jpg",
-      "speed": 500
+      "name": "X-wing",
+      "model": "T-65 X-wing",
+      "image": "xwing.jpg",
+      "manufacturer": "Incom Corporation",
+      "cost_in_credits": "149999",
+      "length": "12.5",
+      "max_atmosphering_speed": "1050",
+      "crew": "1",
+      "passengers": "0",
+      "cargo_capacity": "110",
+      "consumables": "1 week",
+      "hyperdrive_rating": "1.0",
+      "MGLT": "100",
+      "class": "starfighter",
+      "pilots": [
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/9/",
+        "https://swapi.dev/api/people/18/",
+        "https://swapi.dev/api/people/19/"
+      ],
+      "films": [
+        "https://swapi.dev/api/films/1/",
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/3/"
+      ],
+      "created": "2014-12-12T11:19:05.340000Z",
+      "edited": "2014-12-20T21:23:49.886000Z"
     },
     {
-      "name": "Y3 Beta",
-      "image": "/ship1.jpg",
-      "speed": 100
+      "name": "Millennium Falcon",
+      "model": "YT-1300 light freighter",
+      "image" : "milleniumfalcon.jpg",
+      "manufacturer": "Corellian Engineering Corporation",
+      "cost_in_credits": "100000",
+      "length": "34.37",
+      "max_atmosphering_speed": "1050",
+      "crew": "4",
+      "passengers": "6",
+      "cargo_capacity": "100000",
+      "consumables": "2 months",
+      "hyperdrive_rating": "0.5",
+      "MGLT": "75",
+      "class": "Light freighter",
+      "pilots": [
+        "https://swapi.dev/api/people/13/",
+        "https://swapi.dev/api/people/14/",
+        "https://swapi.dev/api/people/25/",
+        "https://swapi.dev/api/people/31/"
+      ],
+      "films": [
+        "https://swapi.dev/api/films/1/",
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/3/"
+      ],
+      "created": "2014-12-10T16:59:45.094000Z",
+      "edited": "2014-12-20T21:23:49.880000Z"
+    },
+    {
+      "name": "Death Star",
+      "model": "DS-1 Orbital Battle Station",
+      "image": "deathstar.jpg",
+      "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
+      "cost_in_credits": "1000000000000",
+      "length": "120000",
+      "max_atmosphering_speed": "n/a",
+      "crew": "342,953",
+      "passengers": "843,342",
+      "cargo_capacity": "1000000000000",
+      "consumables": "3 years",
+      "hyperdrive_rating": "4.0",
+      "MGLT": "10",
+      "class": "battlestation",
+      "pilots": [],
+      "films": [
+        "https://swapi.dev/api/films/1/"
+      ],
+      "created": "2014-12-10T16:36:50.509000Z",
+      "edited": "2014-12-20T21:26:24.783000Z"
     }
   ]
 }
