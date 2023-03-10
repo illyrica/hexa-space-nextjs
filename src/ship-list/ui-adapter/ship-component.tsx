@@ -1,16 +1,15 @@
 "use client";
-import { SpaceShip } from '@/ship-list/domain/space-ship';
 import Image from 'next/image';
-import ship1 from "../../../public/images/ship1.jpeg"
-import { Clapper } from "./Clapper";
 import LazyHydrate from "react-lazy-hydration";
-
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
+import ship1 from "../../../public/images/ship1.jpeg"
+import { SpaceShip } from '@/ship-list/domain/space-ship';
+import { Clapper } from "./Clapper";
 
 // const DynamicClap = dynamic(() =>
 //   import('./Clapper').then((mod) => mod.Clapper)
-// )
 
+// )
 
 export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
 
@@ -35,11 +34,10 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
       <li><b>Speed</b>: {ship.speed} LY/sec</li>
       <li><b>Built</b>: {ship.constructionYear}</li>
 
-      <LazyHydrate on="click">
-        <Clapper />
-      </LazyHydrate>
+      <Clapper />
 
     </ul>
     </div>
   </>
 }
+{/* <LazyHydrate ssrOnly> */}

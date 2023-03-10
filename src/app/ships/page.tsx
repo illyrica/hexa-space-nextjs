@@ -26,7 +26,7 @@ export default async function Ships() {
   const ships = await getShips()
   return (
     <main className={styles.main}>
-      <div style={{height: 2000, width: 1000, backgroundColor: "blue"}} > </div>
+      {/* <div style={{height: 2000, width: 1000, backgroundColor: "blue"}} > </div> */}
       <div className="ship-catalogue">
         {ships.map(ship => <ShipComponent ship={ship}/>)}
       </div>
