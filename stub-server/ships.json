@@ -2,35 +2,35 @@
   "inYard": [
     {
       "creds": 50000,
-      "location": "Ganymed",
+      "location": "Tatooine",
+      "image": "/xwing2.jpg",
+      "mileage": 1000,
+      "constructionYear": 3451
+    },
+    {
+      "creds": 50000,
+      "location": "Alderaan",
       "image": "/ship1.jpg",
       "mileage": 1000,
       "constructionYear": 3451
     },
     {
       "creds": 50000,
-      "location": "Ganymed",
+      "location": "Coruscant",
       "image": "/ship1.jpg",
       "mileage": 1000,
       "constructionYear": 3451
     },
     {
       "creds": 50000,
-      "location": "Ganymed",
+      "location": "Tatooine",
       "image": "/ship1.jpg",
       "mileage": 1000,
       "constructionYear": 3451
     },
     {
       "creds": 50000,
-      "location": "Ganymed",
-      "image": "/ship1.jpg",
-      "mileage": 1000,
-      "constructionYear": 3451
-    },
-    {
-      "creds": 50000,
-      "location": "Ganymed",
+      "location": "Alderaan",
       "image": "/ship1.jpg",
       "mileage": 1000,
       "constructionYear": 3451
@@ -42,6 +42,15 @@
       "model": "T-65 X-wing",
       "image": "xwing.jpg",
       "manufacturer": "Incom Corporation",
+      "armaments": [
+        {
+          "name": "Taim & Bak KX9 laser cannons",
+          "count": 4
+        },
+        {
+          "name": "Krupx MG7 proton torpedo launchers",
+          "count": 2
+        }],
       "cost_in_credits": "149999",
       "length": "12.5",
       "max_atmosphering_speed": "1050",
@@ -126,6 +135,28 @@
       "model": "YT-1300 light freighter",
       "image" : "milleniumfalcon.jpg",
       "manufacturer": "Corellian Engineering Corporation",
+      "armaments": [
+        {
+          "name": "Arakyd Tomral RM-76 heavy laser cannons (under Lando)",
+          "count": 2
+        },
+        {
+          "name": "CEC AG2G quad-bolt cannons (ventral and dorsal)",
+          "count": 2
+        },
+        {
+          "name": "Arakyd ST2 concussion missile racks",
+          "count": 8
+        },
+        {
+          "name": "BlasTech Ax-108 Ground Buzzer blaster cannon",
+          "count": 1
+        },
+        {
+          "name": "Tractor beam projectors",
+          "count": 1
+        }
+      ],
       "cost_in_credits": "100000",
       "length": "34.37",
       "max_atmosphering_speed": "1050",
@@ -210,6 +241,12 @@
       "model": "DS-1 Orbital Battle Station",
       "image": "deathstar.jpg",
       "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
+      "armaments": [
+        {
+          "name": "Superlaser",
+          "count": 1
+        }
+      ],
       "cost_in_credits": "1000000000000",
       "length": "120000",
       "max_atmosphering_speed": "n/a",
