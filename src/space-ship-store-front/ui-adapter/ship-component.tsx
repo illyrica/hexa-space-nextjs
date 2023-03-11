@@ -10,7 +10,7 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => <>
       width={256}
       alt="Space Ship 1"
     />
-    <p>Ship Alpha-1</p>
+    <p>{ship.name}</p>
   </div>
   <ul className="ship-data">
     <li><b>Price</b>:

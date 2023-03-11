@@ -21,10 +21,12 @@
         "unit": "km"
       },
       "vehicleCondition": "new",
-      "constructionYear": 7700
+      "constructionYear": 7700,
+      "modelId": 1
     },
     {
       "name": "Custom Pink Death Star",
+      "modelId": 3,
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -48,6 +50,7 @@
     },
     {
       "name": "Millennium Falcon 987",
+      "modelId": 2,
       "creds": 50000,
       "location": 		{
         "name": "Coruscant",
@@ -71,6 +74,7 @@
     },
     {
       "name" : "X-Wing 4000",
+      "modelId": 1,
       "creds": 50000,
       "location": {
         "name": "Tatooine",
@@ -93,6 +97,7 @@
     },
     {
       "name": "Death Star 3",
+      "modelId": 3,
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -117,6 +122,7 @@
   ],
   "catalogue": [
     {
+      "id": 1,
       "name": "X-wing",
       "model": "T-65 X-wing",
       "image": "xwing.jpg",
@@ -210,6 +216,7 @@
       "edited": "2014-12-20T21:23:49.886000Z"
     },
     {
+      "id": 2,
       "name": "Millennium Falcon",
       "model": "YT-1300 light freighter",
       "image" : "milleniumfalcon.jpg",
@@ -316,6 +323,7 @@
       "edited": "2014-12-20T21:23:49.880000Z"
     },
     {
+      "id": 3,
       "name": "Death Star",
       "model": "DS-1 Orbital Battle Station",
       "image": "deathstar.jpg",
