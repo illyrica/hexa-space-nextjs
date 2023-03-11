@@ -1,6 +1,6 @@
-import { SpaceShip } from '@/ship-list/domain/space-ship';
 import Image from 'next/image';
 import ship1 from "../../../public/images/ship1.jpeg"
+import {SpaceShip} from '../domain/space-ship';
 
 export const ShipComponent = ({ship}: {ship: SpaceShip}) => <>
   <div className="ship">

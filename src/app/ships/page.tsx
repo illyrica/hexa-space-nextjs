@@ -1,7 +1,7 @@
-import { times } from 'remeda';
-import { SpaceShip } from '@/ship-list/domain/space-ship';
-import { ShipComponent } from '@/ship-list/ui-adapter/ship-component';
+import {times} from 'remeda';
 import styles from '../page.module.css';
+import {SpaceShip} from '../../space-ship-store-front/domain/space-ship';
+import {ShipComponent} from '../../space-ship-store-front/ui-adapter/ship-component';
 
 async function getData() {
     const res = await fetch('http://localhost:3000/api/inYard',  { cache: 'no-store' });
