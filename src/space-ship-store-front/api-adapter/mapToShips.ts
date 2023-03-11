@@ -1,13 +1,15 @@
-import { SpaceShip } from "../domain/space-ship";
-import { ShipFromCatalogue, ShipInYard } from "./types";
+import {SpaceShip} from "../domain/space-ship";
+import {ShipFromCatalogue, ShipInYard} from "./types";
 
-export const mapToDomainShips = ({
+export const mapToDomainSpaceShips = ({
   inYard,
   catalogue,
 }: {
   inYard: ShipInYard[];
   catalogue: ShipFromCatalogue[];
 }): SpaceShip[] => {
+
+
   return [
     {
       name: "X-wing",

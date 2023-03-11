@@ -1,6 +1,6 @@
-import { describe, vi } from "vitest";
-import { mapToDomainShips } from "./mapToShips";
-import { ShipInYard, ShipFromCatalogue } from "./types";
+import {describe} from "vitest";
+import {mapToDomainSpaceShips} from "./mapToShips";
+import {ShipFromCatalogue, ShipInYard} from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: 123,
@@ -50,7 +50,7 @@ const exampleShipInYardFromApi: ShipInYard = {
 };
 
 describe("mapToShips", () => {
-  const result = mapToDomainShips({
+  const result = mapToDomainSpaceShips({
     inYard: [exampleShipInYardFromApi],
     catalogue: [exampleShipModellFromApi],
   });
