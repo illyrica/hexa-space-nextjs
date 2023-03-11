@@ -8,13 +8,18 @@ export const mapToDomainSpaceShips = ({
   inYard: ShipInYard[];
   catalogue: ShipFromCatalogue[];
 }): SpaceShip[] => {
-  return inYard.map((ship) => ({
-    price: ship.creds,
-    location: ship.location.name,
-    mileage: ship.mileage.number,
-    constructionYear: ship.constructionYear,
-    image: ship.image,
-    name: "X-wing",
-    speed: 500,
-  }));
+  return inYard.map((ship) => {
+    const shipModel = catalogue.find(
+      (shipFromCatalogue) => shipFromCatalogue.id == ship.modelId
+    );
+    return {
+      price: ship.creds,
+      location: ship.location.name,
+      mileage: ship.mileage.number,
+      constructionYear: ship.constructionYear,
+      image: ship.image,
+      name: shipModel?.name || "unknown",
+      speed: Number(shipModel?.max_atmosphering_speed),
+    };
+  });
 };

@@ -4,7 +4,7 @@ export type SpaceShip = {
   location: string;
   image: string;
   mileage: number;
-  speed: number;
+  speed?: number;
   constructionYear: number;
 };
 

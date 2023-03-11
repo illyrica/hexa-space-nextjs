@@ -63,7 +63,7 @@ describe("mapToShips", () => {
         location: "Tatooine",
         image: "/xwing2.jpg",
         mileage: 111087,
-        speed: 500,
+        speed: 1050,
         constructionYear: 3451,
       },
     ]);
