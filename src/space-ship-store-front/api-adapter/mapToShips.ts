@@ -19,7 +19,7 @@ export const mapToDomainSpaceShips = ({
       constructionYear: ship.constructionYear,
       image: ship.image,
       name: shipModel?.name || "unknown",
-      speed: Number(shipModel?.max_atmosphering_speed),
+      speed: shipModel ? Number(shipModel.max_atmosphering_speed) : undefined,
     };
   });
 };

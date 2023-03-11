@@ -49,13 +49,13 @@ const exampleShipInYardFromApi: ShipInYard = {
   constructionYear: 3451,
 };
 
-describe("mapToShips", () => {
-  const result = mapToDomainSpaceShips({
-    inYard: [exampleShipInYardFromApi],
-    catalogue: [exampleShipModellFromApi],
-  });
-
+describe("mapToDomainSpaceShips", () => {
   it("should map the raw data from REST-Requests to Ships from the Domain", () => {
+    const result = mapToDomainSpaceShips({
+      inYard: [exampleShipInYardFromApi],
+      catalogue: [exampleShipModellFromApi],
+    });
+
     expect(result).toEqual([
       {
         name: "X-wing",
@@ -67,5 +67,23 @@ describe("mapToShips", () => {
         constructionYear: 3451,
       },
     ]);
+  });
+
+  it("should map a ship that is not in the catalogue to the default name 'unknown'", () => {
+    const result = mapToDomainSpaceShips({
+      inYard: [exampleShipInYardFromApi],
+      catalogue: [],
+    });
+
+    expect(result[0].name).toEqual("unknown");
+  });
+
+  it("should map a ship that is not in the catalogue to ship without speed", () => {
+    const result = mapToDomainSpaceShips({
+      inYard: [exampleShipInYardFromApi],
+      catalogue: [],
+    });
+
+    expect(result[0].speed).not.toBeDefined();
   });
 });
