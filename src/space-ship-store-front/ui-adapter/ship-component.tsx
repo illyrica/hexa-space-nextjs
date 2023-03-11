@@ -1,14 +1,13 @@
 import Image from 'next/image';
-import ship1 from "../../../public/images/ship1.jpeg"
 import {SpaceShip} from '../domain/space-ship';
 
 export const ShipComponent = ({ship}: {ship: SpaceShip}) => <>
   <div className="ship">
   <div>
     <Image
-      src={ship1}
-      height={200}
-      width={250}
+      src={`/images${ship.image}`}
+      height={256}
+      width={256}
       alt="Space Ship 1"
     />
     <p>Ship Alpha-1</p>
