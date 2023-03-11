@@ -41,4 +41,21 @@ describe('Ship', () => {
 
     expect(getByTestId("ship-mileage")).toHaveTextContent("3.7")
   });
+
+  it('renders no mileage for ships that do not have mileage', () => {
+    const ship: SpaceShip = {
+      name: "XV-1 Turbo Alpha",
+      price: 50_000,
+      location: "Ganymed",
+      image: "/ship1.jpg",
+      speed: 500,
+      constructionYear: 3451,
+    };
+
+    const {queryByTestId} = render(<ShipComponent ship={ship}/>);
+
+    // screen.debug();
+
+    expect(queryByTestId("ship-mileage")).not.toBeInTheDocument()
+  });
 });
