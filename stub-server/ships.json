@@ -3,36 +3,61 @@
     {
       "creds": 50000,
       "location": "Tatooine",
+      "fuelType": "hypermatter",
       "image": "/xwing2.jpg",
-      "mileage": 1000,
+      "mileage": {
+        "number": 111087,
+        "unit": "km"
+      },
+      "vehicleCondition": "new",
       "constructionYear": 3451
     },
     {
       "creds": 50000,
       "location": "Alderaan",
-      "image": "/ship1.jpg",
-      "mileage": 1000,
+      "image": "/deathstar.jpg",
+      "fuelType": "hypermatter",
+      "vehicleCondition": "survived 3 battles",
+      "mileage": {
+        "number": 4234,
+        "unit": "miles"
+      },
       "constructionYear": 3451
     },
     {
       "creds": 50000,
       "location": "Coruscant",
+      "vehicleCondition": "accident free",
+      "fuelType": "hypermatter",
       "image": "/ship1.jpg",
-      "mileage": 1000,
+      "mileage": {
+        "number": 4.2,
+        "unit": "light years"
+      },
       "constructionYear": 3451
     },
     {
       "creds": 50000,
       "location": "Tatooine",
+      "fuelType": "hypermatter",
+      "vehicleCondition": "accident free",
       "image": "/ship1.jpg",
-      "mileage": 1000,
+      "mileage": {
+        "number": 2,
+        "unit": "light years"
+      },
       "constructionYear": 3451
     },
     {
       "creds": 50000,
       "location": "Alderaan",
+      "fuelType": "hypermatter",
+      "vehicleCondition": "3 years in hanger bay",
       "image": "/ship1.jpg",
-      "mileage": 1000,
+      "mileage": {
+        "number": 200,
+        "unit": "km"
+      },
       "constructionYear": 3451
     }
   ],
