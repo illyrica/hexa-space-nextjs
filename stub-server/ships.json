@@ -1,8 +1,19 @@
 {
   "inYard": [
     {
+      "name": "X-Wing Fighter 1000",
       "creds": 50000,
-      "location": "Tatooine",
+      "location": {
+        "name": "Tatooine",
+        "rotation_period": "23",
+        "orbital_period": "304",
+        "diameter": "10465",
+        "climate": "arid",
+        "gravity": "1 standard",
+        "terrain": "desert",
+        "surface_water": "1",
+        "population": "200000"
+      },
       "fuelType": "hypermatter",
       "image": "/xwing2.jpg",
       "mileage": {
@@ -10,26 +21,48 @@
         "unit": "km"
       },
       "vehicleCondition": "new",
-      "constructionYear": 3451
+      "constructionYear": 7700
     },
     {
+      "name": "Custom Pink Death Star",
       "creds": 50000,
-      "location": "Alderaan",
-      "image": "/deathstar.jpg",
+      "location": {
+        "name": "Alderaan",
+        "rotation_period": "24",
+        "orbital_period": "364",
+        "diameter": "12500",
+        "climate": "temperate",
+        "gravity": "1 standard",
+        "terrain": "grasslands, mountains",
+        "surface_water": "40",
+        "population": "2000000000"
+      },
+      "image": "/deathstarPink.jpg",
       "fuelType": "hypermatter",
-      "vehicleCondition": "survived 3 battles",
+      "vehicleCondition": "3 years in hanger bay",
       "mileage": {
         "number": 4234,
         "unit": "miles"
       },
-      "constructionYear": 3451
+      "constructionYear": 7727
     },
     {
+      "name": "Millennium Falcon 987",
       "creds": 50000,
-      "location": "Coruscant",
+      "location": 		{
+        "name": "Coruscant",
+        "rotation_period": "24",
+        "orbital_period": "368",
+        "diameter": "12240",
+        "climate": "temperate",
+        "gravity": "1 standard",
+        "terrain": "cityscape, mountains",
+        "surface_water": "unknown",
+        "population": "1000000000000"
+      },
       "vehicleCondition": "accident free",
       "fuelType": "hypermatter",
-      "image": "/ship1.jpg",
+      "image": "/millenniumFalconGreen.jpg",
       "mileage": {
         "number": 4.2,
         "unit": "light years"
@@ -37,11 +70,21 @@
       "constructionYear": 3451
     },
     {
+      "name" : "X-Wing 4000",
       "creds": 50000,
-      "location": "Tatooine",
+      "location": {
+        "name": "Tatooine",
+        "rotation_period": "23",
+        "orbital_period": "304",
+        "diameter": "10465",
+        "climate": "arid",
+        "gravity": "1 standard",
+        "terrain": "desert",
+        "surface_water": "1"
+      },
       "fuelType": "hypermatter",
       "vehicleCondition": "accident free",
-      "image": "/ship1.jpg",
+      "image": "/xwing4000.jpg",
       "mileage": {
         "number": 2,
         "unit": "light years"
@@ -49,11 +92,22 @@
       "constructionYear": 3451
     },
     {
+      "name": "Death Star 3",
       "creds": 50000,
-      "location": "Alderaan",
+      "location": {
+        "name": "Alderaan",
+        "rotation_period": "24",
+        "orbital_period": "364",
+        "diameter": "12500",
+        "climate": "temperate",
+        "gravity": "1 standard",
+        "terrain": "grasslands, mountains",
+        "surface_water": "40",
+        "population": "2000000000"
+      },
       "fuelType": "hypermatter",
       "vehicleCondition": "3 years in hanger bay",
-      "image": "/ship1.jpg",
+      "image": "/deathstarInHangerbay.jpg",
       "mileage": {
         "number": 200,
         "unit": "km"
