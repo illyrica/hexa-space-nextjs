@@ -21,7 +21,7 @@ describe('getSpaceShips', ()=>{
             fuelType: "hypermatter",
             image: "/xwing2.jpg",
             mileage: {
-                number: 111087,
+                number: 111087333333333,
                 unit: "km",
             },
             modelId: 123,
@@ -58,7 +58,7 @@ describe('getSpaceShips', ()=>{
             price: 50000,
             location: "Tatooine",
             image: "/xwing2.jpg",
-            mileage: 111087,
+            mileage: 11.7,
             speed: 1050,
             constructionYear: 3451,
         },])

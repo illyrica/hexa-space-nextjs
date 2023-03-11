@@ -2,7 +2,7 @@ export type ShipInYard = {
     "creds": number,
     "fuelType": string,
     "image": string,
-    "mileage": {
+    "mileage" ?: {
       "number": number,
       "unit": string
     },

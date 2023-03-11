@@ -1,6 +1,6 @@
-import { describe } from "vitest";
-import { mapToDomainSpaceShips } from "./mapToShips";
-import { ShipFromCatalogue, ShipInYard } from "./types";
+import {describe} from "vitest";
+import {mapToDomainSpaceShips, mileageToLightYears} from "./mapToSpaceShips";
+import {ShipFromCatalogue, ShipInYard} from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: 123,
@@ -41,7 +41,7 @@ const exampleShipInYardFromApi: ShipInYard = {
   fuelType: "hypermatter",
   image: "/xwing2.jpg",
   mileage: {
-    number: 111087,
+    number: 111087333333333,
     unit: "km",
   },
   modelId: 123,
@@ -62,7 +62,7 @@ describe("mapToDomainSpaceShips", () => {
         price: 50000,
         location: "Tatooine",
         image: "/xwing2.jpg",
-        mileage: 111087,
+        mileage: 11.7,
         speed: 1050,
         constructionYear: 3451,
       },
@@ -86,4 +86,41 @@ describe("mapToDomainSpaceShips", () => {
 
     expect(result[0].speed).not.toBeDefined();
   });
+
+  it("should map km mileage to light year", () => {
+    const result = mapToDomainSpaceShips({
+      inYard: [exampleShipInYardFromApi],
+      catalogue: [exampleShipModellFromApi],
+    });
+
+    expect(result[0].mileage).toEqual(11.7);
+  });
 });
+
+
+describe('mileageToLightYears',()=>{
+  it('returns km into light years rounded by one decimal', ()=>{
+    const result = mileageToLightYears({number: 46000000000000, unit:"km"})
+
+    expect(result).toEqual(4.9)
+  })
+
+  it('returns miles into light years rounded by one decimal', ()=>{
+    const result = mileageToLightYears({number: 46000000000000, unit:"miles"})
+
+    expect(result).toEqual(7.8)
+  })
+
+  it('returns mi into light years rounded by one decimal', ()=>{
+    const result = mileageToLightYears({number: 46000000000000, unit:"mi"})
+
+    expect(result).toEqual(7.8)
+  })
+
+  it('returns mi into light years rounded by one decimal', ()=>{
+    const result = mileageToLightYears({number: 46000000000000, unit:"cm"})
+
+    expect(result).toBeUndefined()
+  })
+
+})

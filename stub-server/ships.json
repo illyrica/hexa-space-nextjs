@@ -17,7 +17,7 @@
       "fuelType": "hypermatter",
       "image": "/xwing2.jpg",
       "mileage": {
-        "number": 111087,
+        "number": 11102929384828387,
         "unit": "km"
       },
       "vehicleCondition": "new",
@@ -43,7 +43,7 @@
       "fuelType": "hypermatter",
       "vehicleCondition": "3 years in hanger bay",
       "mileage": {
-        "number": 4234,
+        "number": 42333333111214,
         "unit": "miles"
       },
       "constructionYear": 7727
@@ -114,7 +114,7 @@
       "vehicleCondition": "3 years in hanger bay",
       "image": "/deathstarInHangerbay.jpg",
       "mileage": {
-        "number": 200,
+        "number": 2010998887770,
         "unit": "km"
       },
       "constructionYear": 3451
