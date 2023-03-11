@@ -1,6 +1,6 @@
-import {describe} from "vitest";
-import {mapToDomainSpaceShips} from "./mapToShips";
-import {ShipFromCatalogue, ShipInYard} from "./types";
+import { describe } from "vitest";
+import { mapToDomainSpaceShips } from "./mapToShips";
+import { ShipFromCatalogue, ShipInYard } from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: 123,
@@ -61,7 +61,7 @@ describe("mapToShips", () => {
         name: "X-wing",
         price: 50000,
         location: "Tatooine",
-        image: "/xwing.jpg",
+        image: "/xwing2.jpg",
         mileage: 111087,
         speed: 500,
         constructionYear: 3451,
