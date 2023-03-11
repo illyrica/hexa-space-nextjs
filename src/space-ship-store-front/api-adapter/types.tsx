@@ -63,6 +63,6 @@ export type ShipFromCatalogue = {
       "producer": string,
       "release_date": string
     }[],
-  "created": "2014-12-12T11:19:05.340000Z",
-  "edited": "2014-12-20T21:23:49.886000Z"
+  "created": string
+  "edited": string
 };
