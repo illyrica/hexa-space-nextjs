@@ -10,7 +10,7 @@ export const mapToDomainSpaceShips = ({
 }): SpaceShip[] => {
   return inYard.map((ship) => {
     const shipModel = catalogue.find(
-      (shipFromCatalogue) => shipFromCatalogue.id == ship.modelId
+      (shipFromCatalogue) => shipFromCatalogue.id === ship.modelId
     );
     return {
       id: ship.id,

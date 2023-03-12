@@ -1,7 +1,6 @@
+import { getClaps } from '@/space-ship-store-front/api-adapter/getClaps';
+import { getSpaceShips } from '@/space-ship-store-front/api-adapter/getSpaceShips';
 import { attachClapsToShips } from '@/space-ship-store-front/clap-adapter/attachClapsToShips';
-import { getClaps, incClapsForId } from '@/space-ship-store-front/db-adapter/claps-store';
-import { getSpaceShips } from '../../space-ship-store-front/api-adapter/getSpaceShips';
-import { ShipComponent } from '../../space-ship-store-front/ui-adapter/ship-component';
 import styles from '../page.module.css';
 import { ShipCatalogue } from './ship-catalogue';
 
