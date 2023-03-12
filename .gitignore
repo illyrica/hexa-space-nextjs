@@ -38,3 +38,5 @@ next-env.d.ts
 # IntelliJ
 /.idea/
 /hexa-space.iml
+
+clap-store.json
