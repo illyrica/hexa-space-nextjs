@@ -72,7 +72,6 @@ describe("getSpaceShips", () => {
         mileage: 11.7,
         speed: 1050,
         constructionYear: 3451,
-        claps: 20,
       },
     ]);
   });

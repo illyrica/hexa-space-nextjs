@@ -25,6 +25,7 @@ const exampleShipModellFromApi: ShipFromCatalogue = {
 };
 
 const exampleShipInYardFromApi: ShipInYard = {
+  id: 456,
   creds: 50000,
   location: {
     name: "Tatooine",
@@ -58,6 +59,7 @@ describe("mapToDomainSpaceShips", () => {
 
     expect(result).toEqual([
       {
+        id: 456,
         name: "X-wing",
         price: 50000,
         location: "Tatooine",
@@ -65,7 +67,6 @@ describe("mapToDomainSpaceShips", () => {
         mileage: 11.7,
         speed: 1050,
         constructionYear: 3451,
-        claps: 20,
       },
     ]);
   });

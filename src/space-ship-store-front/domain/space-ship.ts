@@ -1,4 +1,5 @@
 export type SpaceShip = {
+  id: number;
   name: string;
   price: number;
   location: string;
@@ -6,7 +7,7 @@ export type SpaceShip = {
   mileage?: MileageInLightYears;
   speed?: number;
   constructionYear: number;
-  claps: number;
+  claps?: number;
 };
 
 export type MileageInLightYears = number;

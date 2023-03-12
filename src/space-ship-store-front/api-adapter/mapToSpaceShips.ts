@@ -13,6 +13,7 @@ export const mapToDomainSpaceShips = ({
       (shipFromCatalogue) => shipFromCatalogue.id == ship.modelId
     );
     return {
+      id: ship.id,
       price: ship.creds,
       location: ship.location.name,
       mileage: ship.mileage ? mileageToLightYears(ship.mileage) : undefined,
@@ -20,7 +21,6 @@ export const mapToDomainSpaceShips = ({
       image: ship.image,
       name: shipModel?.name || "unknown",
       speed: shipModel ? Number(shipModel.max_atmosphering_speed) : undefined,
-      claps: 20,
     };
   });
 };
