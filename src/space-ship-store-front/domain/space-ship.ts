@@ -1,5 +1,5 @@
 export type SpaceShip = {
-  id: number;
+  id: string;
   name: string;
   price: number;
   location: string;

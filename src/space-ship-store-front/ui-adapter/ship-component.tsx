@@ -42,7 +42,7 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
         <span data-testid="monthly-rate"> {monthlyRate(ship, numberOfRates).toFixed(2)}</span>
       </li>
 
-      <Clapper numberOfClaps={ship.claps}/>
+      <Clapper numberOfClaps={ship.claps?? 0}/>
 
     </ul>
     </div>

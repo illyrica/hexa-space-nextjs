@@ -6,7 +6,7 @@ import { getClaps } from '@/space-ship-store-front/db-adapter/claps-store';
 
 export default async function Ships() {
   const ships = await getSpaceShips();
-  const claps = getClaps();
+  const claps = await getClaps();
   const shipsWithClaps = attachClapsToShips({claps, ships});
 
   return (

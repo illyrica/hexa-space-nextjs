@@ -1,15 +1,11 @@
 import { SpaceShip } from "../domain/space-ship";
 import { attachClapsToShips } from "./attachClapsToShips";
-import { Clap } from "./clap";
+import { Clap } from "./claps";
 
 describe('attachClaps', () => {
   it('should attach claps to SpaceShips', () => {
-    const claps: Clap[] = [
-      {
-        shipId: 27,
-        claps: 88
-      }
-    ];
+    const claps = {"27": 88};
+
     const ships: SpaceShip[] = [{
       id: 27,
       name: "XV-1 Turbo Alpha",
