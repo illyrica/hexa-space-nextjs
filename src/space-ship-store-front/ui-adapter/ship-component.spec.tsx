@@ -6,6 +6,7 @@ import '@testing-library/jest-dom/extend-expect'
 import {ShipComponent} from './ship-component';
 
 const spaceShipWorth50000: SpaceShip = {
+  id: "27",
   name: "XV-1 Turbo Alpha",
   price: 50_000,
   location: "Ganymed",
@@ -16,6 +17,7 @@ const spaceShipWorth50000: SpaceShip = {
 };
 
 const aSpaceShip: SpaceShip = {
+  id: "27",
   name: "XV-1 Turbo Alpha",
   price: 10000,
   location: "Ganymed",
@@ -34,6 +36,7 @@ describe('Ship', () => {
 
   it('renders mileage', () => {
     const ship: SpaceShip = {
+      id: "27",
       name: "XV-1 Turbo Alpha",
       price: 50_000,
       location: "Ganymed",
@@ -50,6 +53,7 @@ describe('Ship', () => {
 
   it('renders no mileage for ships that do not have mileage', () => {
     const shipWithoutMillage: SpaceShip = {
+      id: "27",
       name: "XV-1 Turbo Alpha",
       price: 50_000,
       location: "Ganymed",

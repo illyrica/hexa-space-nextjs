@@ -1,13 +1,13 @@
 import { SpaceShip } from "../domain/space-ship";
 import { attachClapsToShips } from "./attachClapsToShips";
-import { Clap } from "./claps";
+import { Claps } from "./claps";
 
 describe('attachClaps', () => {
   it('should attach claps to SpaceShips', () => {
-    const claps = {"27": 88};
+    const claps: Claps = {"27": 88};
 
     const ships: SpaceShip[] = [{
-      id: 27,
+      id: "27",
       name: "XV-1 Turbo Alpha",
       price: 50_000,
       location: "Ganymed",
@@ -18,7 +18,7 @@ describe('attachClaps', () => {
     }];
 
     expect( attachClapsToShips({claps, ships})).toEqual([{
-      id: 27,
+      id: "27",
       name: "XV-1 Turbo Alpha",
       price: 50_000,
       location: "Ganymed",
