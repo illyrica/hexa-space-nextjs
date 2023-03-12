@@ -8,7 +8,9 @@ export type SpaceShip = {
   constructionYear: number;
 };
 
-export type MileageInLightYears = number
+export type MileageInLightYears = number;
+
+const INTEREST_RATE = 1.1;
 
 export const monthlyRate = (ship: SpaceShip, durationInMonth: number): number =>
-  (ship.price / durationInMonth) * 1.1;
+  (ship.price / durationInMonth) * (1 + INTEREST_RATE / 12);
