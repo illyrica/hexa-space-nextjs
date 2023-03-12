@@ -43,7 +43,7 @@ export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistC
         <span data-testid="monthly-rate"> {monthlyRate(ship, numberOfRates).toFixed(2)}</span>
       </li>
 
-      <Clapper numberOfClaps={ship.claps?? 0} persistClapInc={() => persistClapInc(ship.id)}/>
+      <Clapper numberOfClaps={ship.claps?? 0} persistInc={() => persistClapInc(ship.id)}/>
 
     </ul>
     </div>
