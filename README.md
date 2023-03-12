@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, install dependencies. 
+First, install dependencies.
 
 ```bash
 npm install
@@ -21,13 +21,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Exercise 1: May the 4th be with you!
 
-#### Goal: Add the following business rule to the domain. Adjust the UI to show the reduced prices. 
+#### Goal: Add the new business rule to the domain. Adjust the UI to show the reduced prices.
 
-**_Business Rule: Every year on the 4th of May all spaceships prices are reduced by 10%._**
+1. **_Business Rule: Every year on the 4th of May all spaceships prices are reduced by 10%._**
+2. also show Discount-Banner near the Price Display
+3. show original Price as strike through
 
 ### Exercise 2: An elegant Weapon for a more civilized age
 
-#### Goal: Adjust domain to calculate each ships weapon power. 
+#### Goal: Calculate each ships weapon power and display it
 
 
 
