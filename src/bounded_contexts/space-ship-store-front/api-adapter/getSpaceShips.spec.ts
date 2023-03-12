@@ -69,6 +69,7 @@ describe("getSpaceShips", () => {
 
     expect(result).toEqual([
       {
+        id: "456",
         name: "X-wing",
         price: 50000,
         location: "Tatooine",

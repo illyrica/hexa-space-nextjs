@@ -1,8 +1,9 @@
 {
   "inYard": [
     {
-      "id": 1234,
+      "id": "1234",
       "name": "X-Wing Fighter 1000",
+      "modelId": "1",
       "creds": 50000,
       "location": {
         "name": "Tatooine",
@@ -22,13 +23,12 @@
         "unit": "km"
       },
       "vehicleCondition": "new",
-      "constructionYear": 7700,
-      "modelId": 1
+      "constructionYear": 7700
     },
     {
       "id": "1235",
       "name": "Custom Pink Death Star",
-      "modelId": 3,
+      "modelId": "3",
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -53,7 +53,7 @@
     {
       "id": "1236",
       "name": "Millennium Falcon 987",
-      "modelId": 2,
+      "modelId": "3",
       "creds": 50000,
       "location": {
         "name": "Coruscant",
@@ -78,7 +78,7 @@
     {
       "id": "1237",
       "name": "X-Wing 4000",
-      "modelId": 1,
+      "modelId": "1",
       "creds": 50000,
       "location": {
         "name": "Tatooine",
@@ -102,7 +102,7 @@
     {
       "id": "1238",
       "name": "Death Star 3",
-      "modelId": 3,
+      "modelId": "3",
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -333,7 +333,7 @@
       "edited": "2014-12-20T21:23:49.880000Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Death Star",
       "model": "DS-1 Orbital Battle Station",
       "image": "deathstar.jpg",
