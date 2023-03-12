@@ -11,6 +11,7 @@ describe("SpaceShip.monthlyRate", () => {
       mileage: 1,
       speed: 1,
       constructionYear: 1,
+      claps: 0,
     };
     expect(monthlyRate(ship, 10)).toBeCloseTo(5458.33, 2);
   });

@@ -20,6 +20,7 @@ export const mapToDomainSpaceShips = ({
       image: ship.image,
       name: shipModel?.name || "unknown",
       speed: shipModel ? Number(shipModel.max_atmosphering_speed) : undefined,
+      claps: 20,
     };
   });
 };

@@ -2,10 +2,11 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import {monthlyRate, SpaceShip} from '../domain/space-ship';
+import {DEFAULT_NUM_OF_MONTH, monthlyRate, SpaceShip} from '../domain/space-ship';
+import { Clapper } from './clapper';
 
 export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
-  const [numberOfRates, setNumberOfRates] = useState(12)
+  const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH)
   return <>
     <div className="ship">
     <div>
@@ -40,6 +41,8 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
       <li><b>Monthly Rate</b>:
         <span data-testid="monthly-rate"> {monthlyRate(ship, numberOfRates).toFixed(2)}</span>
       </li>
+
+      <Clapper numberOfClaps={ship.claps}/>
 
     </ul>
     </div>

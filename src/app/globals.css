@@ -126,3 +126,14 @@ a {
   padding-left: 10px;
   list-style-type: none;
 }
+
+.clapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.number-of-claps {
+  font-weight: bold;
+  font-size: 20px;
+}
