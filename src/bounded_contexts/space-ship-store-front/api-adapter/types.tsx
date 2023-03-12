@@ -18,13 +18,13 @@ export type ShipInYard = {
       "surface_water": string,
       "population": string
     },
-    "modelId": number,
+    "modelId": string,
     "vehicleCondition": string,
     "constructionYear": number
   };
 
 export type ShipFromCatalogue = {
-  "id": number
+  "id": string
   "name": string,
   "model": string,
   "image": string,

@@ -26,7 +26,7 @@
       "modelId": 1
     },
     {
-      "id": 1235,
+      "id": "1235",
       "name": "Custom Pink Death Star",
       "modelId": 3,
       "creds": 50000,
@@ -51,7 +51,7 @@
       "constructionYear": 7727
     },
     {
-      "id": 1236,
+      "id": "1236",
       "name": "Millennium Falcon 987",
       "modelId": 2,
       "creds": 50000,
@@ -76,7 +76,7 @@
       "constructionYear": 3451
     },
     {
-      "id": 1237,
+      "id": "1237",
       "name": "X-Wing 4000",
       "modelId": 1,
       "creds": 50000,
@@ -100,7 +100,7 @@
       "constructionYear": 3451
     },
     {
-      "id": 1238,
+      "id": "1238",
       "name": "Death Star 3",
       "modelId": 3,
       "creds": 50000,
@@ -127,7 +127,7 @@
   ],
   "catalogue": [
     {
-      "id": 1,
+      "id": "1",
       "name": "X-wing",
       "model": "T-65 X-wing",
       "image": "xwing.jpg",

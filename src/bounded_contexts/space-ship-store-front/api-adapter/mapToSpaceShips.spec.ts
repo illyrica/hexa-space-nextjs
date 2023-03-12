@@ -3,7 +3,7 @@ import { mapToDomainSpaceShips, mileageToLightYears } from "./mapToSpaceShips";
 import { ShipFromCatalogue, ShipInYard } from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
-  id: 123,
+  id: "123",
   name: "X-wing",
   model: "T-65 X-wing",
   image: "xwing.jpg",
@@ -25,7 +25,7 @@ const exampleShipModellFromApi: ShipFromCatalogue = {
 };
 
 const exampleShipInYardFromApi: ShipInYard = {
-  id: 456,
+  id: "456",
   creds: 50000,
   location: {
     name: "Tatooine",
@@ -45,7 +45,7 @@ const exampleShipInYardFromApi: ShipInYard = {
     value: 111087333333333,
     unit: "km",
   },
-  modelId: 123,
+  modelId: "123",
   vehicleCondition: "new",
   constructionYear: 3451,
 };
@@ -59,7 +59,7 @@ describe("mapToDomainSpaceShips", () => {
 
     expect(result).toEqual([
       {
-        id: 456,
+        id: "456",
         name: "X-wing",
         price: 50000,
         location: "Tatooine",

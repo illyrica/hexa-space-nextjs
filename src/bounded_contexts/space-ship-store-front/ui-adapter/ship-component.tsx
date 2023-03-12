@@ -14,7 +14,7 @@ export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistC
         src={`/images${ship.image}`}
         height={256}
         width={256}
-        alt="Space Ship 1"
+        alt={ship.name}
         priority
       />
       <p>{ship.name}</p>

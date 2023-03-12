@@ -7,7 +7,7 @@ const example: ShipInYard = {
   creds: 50000,
   fuelType: "hypermatter",
   image: "/xwing2.jpg",
-  modelId: 1,
+  modelId: "1",
   location: {
     name: "Tatooine",
     rotation_period: "23",

@@ -1,8 +1,8 @@
-import { getClaps } from '@/space-ship-store-front/api-adapter/getClaps';
-import { getSpaceShips } from '@/space-ship-store-front/api-adapter/getSpaceShips';
-import { attachClapsToShips } from '@/space-ship-store-front/clap-adapter/attachClapsToShips';
-import styles from '../page.module.css';
+import { getSpaceShips } from '@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips';
+import { attachClapsToShips } from '@/bounded_contexts/space-ship-store-front/clap-adapter/attachClapsToShips';
 import { ShipCatalogue } from './ship-catalogue';
+import styles from '../page.module.css';
+import { getClaps } from '@/bounded_contexts/space-ship-store-front/api-adapter/getClaps';
 
 export default async function Ships() {
   const ships = await getSpaceShips();
