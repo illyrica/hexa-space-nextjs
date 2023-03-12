@@ -5,7 +5,7 @@ import { useState } from 'react';
 import {DEFAULT_NUM_OF_MONTH, monthlyRate, SpaceShip} from '../domain/space-ship';
 import { Clapper } from './clapper';
 
-export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistClapInc: (id: string) => void}) => {
+export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistClapInc: (id: string) => Promise<{claps: number}>}) => {
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH)
   return <>
     <div className="ship">

@@ -3,6 +3,7 @@ import { END_POINT, getInYard } from "./getInYard";
 import { ShipInYard } from "./types";
 
 const example: ShipInYard = {
+  id: "29",
   creds: 50000,
   fuelType: "hypermatter",
   image: "/xwing2.jpg",
@@ -19,7 +20,7 @@ const example: ShipInYard = {
     population: "200000",
   },
   mileage: {
-    number: 111087,
+    value: 111087,
     unit: "km",
   },
   vehicleCondition: "new",

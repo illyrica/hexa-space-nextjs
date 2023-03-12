@@ -4,6 +4,7 @@ import { monthlyRate, SpaceShip } from "./space-ship";
 describe("SpaceShip.monthlyRate", () => {
   it("should calc the monthly Rate for 10 month with a 10% interest rate", () => {
     const ship: SpaceShip = {
+      id: "23",
       name: "Foo",
       price: 50_000,
       location: "string",

@@ -7,5 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const id = JSON.parse(req.body).id;
-  res.status(200).json(JSON.stringify({ claps: await incClapsForId(id) }));
+  console.log(`incClapsForId(${id})`);
+
+  res.status(200).json({ claps: await incClapsForId(id) });
 }
