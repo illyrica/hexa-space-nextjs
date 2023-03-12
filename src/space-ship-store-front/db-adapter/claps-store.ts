@@ -8,6 +8,6 @@ export const getClaps = async (): Promise<Record<string, number>> =>
   await db.getData("/");
 
 export const incClapsForId = async (id: string) => {
-  const value = (await getClaps())[id];
+  const value = (await getClaps())[id] | 0;
   await db.push(`/${id}`, value + 1, false);
 };

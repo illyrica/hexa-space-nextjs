@@ -5,7 +5,7 @@ import { useState } from 'react';
 import {DEFAULT_NUM_OF_MONTH, monthlyRate, SpaceShip} from '../domain/space-ship';
 import { Clapper } from './clapper';
 
-export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
+export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistClapInc: (id: string) => void}) => {
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH)
   return <>
     <div className="ship">
@@ -15,6 +15,7 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
         height={256}
         width={256}
         alt="Space Ship 1"
+        priority
       />
       <p>{ship.name}</p>
     </div>
@@ -42,7 +43,7 @@ export const ShipComponent = ({ship}: {ship: SpaceShip}) => {
         <span data-testid="monthly-rate"> {monthlyRate(ship, numberOfRates).toFixed(2)}</span>
       </li>
 
-      <Clapper numberOfClaps={ship.claps?? 0}/>
+      <Clapper numberOfClaps={ship.claps?? 0} persistClapInc={() => persistClapInc(ship.id)}/>
 
     </ul>
     </div>
