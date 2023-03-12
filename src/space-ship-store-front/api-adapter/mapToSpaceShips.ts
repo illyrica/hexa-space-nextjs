@@ -1,5 +1,5 @@
-import {MileageInLightYears, SpaceShip} from "../domain/space-ship";
-import {ShipFromCatalogue, ShipInYard} from "./types";
+import { MileageInLightYears, SpaceShip } from "../domain/space-ship";
+import { ShipFromCatalogue, ShipInYard } from "./types";
 
 export const mapToDomainSpaceShips = ({
   inYard,
@@ -24,25 +24,29 @@ export const mapToDomainSpaceShips = ({
   });
 };
 
-export const miToRoundedLightYears = (miles: number) : number => {
- return Math.round(0.00000000000017011 * miles * 10) / 10
-}
+export const miToRoundedLightYears = (miles: number): number => {
+  return Math.round(0.00000000000017011 * miles * 10) / 10;
+};
 
-export const kmToRoundedLightYears = (kilometers: number) : number => {
-  return Math.round(0.00000000000010570 * kilometers * 10) / 10
-}
+export const kmToRoundedLightYears = (kilometers: number): number => {
+  return Math.round(0.0000000000001057 * kilometers * 10) / 10;
+};
 
-export const mileageToLightYears = ({number, unit}: {number: number, unit: string}) : MileageInLightYears | undefined =>
-{
-switch (unit){
-  case "km":
-    return kmToRoundedLightYears(number)
-  case "miles":
-  case "mi":
-    return miToRoundedLightYears(number)
-  case "light years":
-    return number
-  default:
-    return undefined
-}
-}
+const identity = (v: number) => v;
+
+export const mileageToLightYears = ({
+  value,
+  unit,
+}: {
+  value: number;
+  unit: string;
+}): MileageInLightYears | undefined => {
+  const calc: typeof kmToRoundedLightYears | undefined = {
+    km: kmToRoundedLightYears,
+    miles: miToRoundedLightYears,
+    mi: miToRoundedLightYears,
+    "light years": identity,
+  }[unit];
+
+  return calc ? calc(value) : undefined;
+};

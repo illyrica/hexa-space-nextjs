@@ -1,6 +1,6 @@
-import {describe} from "vitest";
-import {mapToDomainSpaceShips, mileageToLightYears} from "./mapToSpaceShips";
-import {ShipFromCatalogue, ShipInYard} from "./types";
+import { describe } from "vitest";
+import { mapToDomainSpaceShips, mileageToLightYears } from "./mapToSpaceShips";
+import { ShipFromCatalogue, ShipInYard } from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: 123,
@@ -41,7 +41,7 @@ const exampleShipInYardFromApi: ShipInYard = {
   fuelType: "hypermatter",
   image: "/xwing2.jpg",
   mileage: {
-    number: 111087333333333,
+    value: 111087333333333,
     unit: "km",
   },
   modelId: 123,
@@ -87,7 +87,7 @@ describe("mapToDomainSpaceShips", () => {
     expect(result[0].speed).not.toBeDefined();
   });
 
-  it("should map km mileage to light year", () => {
+  it("should map km mileage to light years", () => {
     const result = mapToDomainSpaceShips({
       inYard: [exampleShipInYardFromApi],
       catalogue: [exampleShipModellFromApi],
@@ -97,30 +97,31 @@ describe("mapToDomainSpaceShips", () => {
   });
 });
 
+describe("mileageToLightYears", () => {
+  it("converts km into light years rounded by one decimal", () => {
+    const result = mileageToLightYears({ value: 46000000000000, unit: "km" });
 
-describe('mileageToLightYears',()=>{
-  it('returns km into light years rounded by one decimal', ()=>{
-    const result = mileageToLightYears({number: 46000000000000, unit:"km"})
+    expect(result).toEqual(4.9);
+  });
 
-    expect(result).toEqual(4.9)
-  })
+  it("converts miles into light years rounded by one decimal", () => {
+    const result = mileageToLightYears({
+      value: 46000000000000,
+      unit: "miles",
+    });
 
-  it('returns miles into light years rounded by one decimal', ()=>{
-    const result = mileageToLightYears({number: 46000000000000, unit:"miles"})
+    expect(result).toEqual(7.8);
+  });
 
-    expect(result).toEqual(7.8)
-  })
+  it("converts mi into light years rounded by one decimal", () => {
+    const result = mileageToLightYears({ value: 46000000000000, unit: "mi" });
 
-  it('returns mi into light years rounded by one decimal', ()=>{
-    const result = mileageToLightYears({number: 46000000000000, unit:"mi"})
+    expect(result).toEqual(7.8);
+  });
 
-    expect(result).toEqual(7.8)
-  })
+  it("converts mi into light years rounded by one decimal", () => {
+    const result = mileageToLightYears({ value: 46000000000000, unit: "cm" });
 
-  it('returns mi into light years rounded by one decimal', ()=>{
-    const result = mileageToLightYears({number: 46000000000000, unit:"cm"})
-
-    expect(result).toBeUndefined()
-  })
-
-})
+    expect(result).toBeUndefined();
+  });
+});

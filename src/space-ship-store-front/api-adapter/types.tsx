@@ -3,7 +3,7 @@ export type ShipInYard = {
     "fuelType": string,
     "image": string,
     "mileage" ?: {
-      "number": number,
+      "value": number,
       "unit": string
     },
     "location": {
