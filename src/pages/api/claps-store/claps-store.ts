@@ -1,6 +1,6 @@
 import { Config, JsonDB } from "node-json-db";
 
-const STORE_FILE = "src/db/clap-store.json";
+const STORE_FILE = "db/clap-store.json";
 
 const db = new JsonDB(new Config(STORE_FILE, true, true));
 
