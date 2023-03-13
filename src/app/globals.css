@@ -137,3 +137,15 @@ a {
   font-weight: bold;
   font-size: 20px;
 }
+
+.weapon {
+  justify-content: space-between;
+  background-color: rgb(2, 91, 26);
+  color: #80f008f3;
+  margin-top: 50px;
+  padding: 9px;
+  border-top: 4px solid #80f008f3;
+  border-bottom: 4px solid #80f008f3;
+  flex-direction: row;
+  display: flex;
+}
