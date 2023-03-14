@@ -1,5 +1,5 @@
-import { MileageInLightYears, SpaceShip } from "../domain/space-ship";
-import { ShipFromCatalogue, ShipInYard } from "./types";
+import {MileageInLightYears, SpaceShip} from "../domain/space-ship";
+import {ShipFromCatalogue, ShipInYard} from "./types";
 
 export const mapToDomainSpaceShips = ({
   inYard,
@@ -10,7 +10,7 @@ export const mapToDomainSpaceShips = ({
 }): SpaceShip[] => {
   return inYard.map((ship) => {
     const shipModel = catalogue.find(
-      (shipFromCatalogue) => shipFromCatalogue.id === ship.modelId
+      (shipFromCatalogue) => shipFromCatalogue.id === ship.catalogId
     );
     return {
       id: ship.id,

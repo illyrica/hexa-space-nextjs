@@ -1,13 +1,13 @@
-import { describe, vi } from "vitest";
-import { END_POINT, getInYard } from "./getInYard";
-import { ShipInYard } from "./types";
+import {describe, vi} from "vitest";
+import {END_POINT, getInYard} from "./getInYard";
+import {ShipInYard} from "./types";
 
 const example: ShipInYard = {
   id: "29",
   creds: 50000,
   fuelType: "hypermatter",
   image: "/xwing2.jpg",
-  modelId: "1",
+  catalogId: "1",
   location: {
     name: "Tatooine",
     rotation_period: "23",

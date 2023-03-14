@@ -1,6 +1,6 @@
-import { describe } from "vitest";
-import { mapToDomainSpaceShips, mileageToLightYears } from "./mapToSpaceShips";
-import { ShipFromCatalogue, ShipInYard } from "./types";
+import {describe} from "vitest";
+import {mapToDomainSpaceShips, mileageToLightYears} from "./mapToSpaceShips";
+import {ShipFromCatalogue, ShipInYard} from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: "123",
@@ -46,7 +46,7 @@ const exampleShipInYardFromApi: ShipInYard = {
     value: 111087333333333,
     unit: "km",
   },
-  modelId: "123",
+  catalogId: "123",
   vehicleCondition: "new",
   constructionYear: 3451,
 };

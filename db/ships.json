@@ -3,7 +3,7 @@
     {
       "id": "1234",
       "name": "X-Wing Fighter 1000",
-      "modelId": "1",
+      "catalogId": "1",
       "creds": 50000,
       "location": {
         "name": "Tatooine",
@@ -28,7 +28,7 @@
     {
       "id": "1235",
       "name": "Custom Pink Death Star",
-      "modelId": "3",
+      "catalogId": "3",
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -53,7 +53,7 @@
     {
       "id": "1236",
       "name": "Millennium Falcon 987",
-      "modelId": "2",
+      "catalogId": "2",
       "creds": 50000,
       "location": {
         "name": "Coruscant",
@@ -78,7 +78,7 @@
     {
       "id": "1237",
       "name": "X-Wing 4000",
-      "modelId": "1",
+      "catalogId": "1",
       "creds": 50000,
       "location": {
         "name": "Tatooine",
@@ -102,7 +102,7 @@
     {
       "id": "1238",
       "name": "Death Star 3",
-      "modelId": "3",
+      "catalogId": "3",
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -129,7 +129,6 @@
     {
       "id": "1",
       "name": "X-wing",
-      "model": "T-65 X-wing",
       "image": "xwing.jpg",
       "manufacturer": "Incom Corporation",
       "armaments": [
@@ -226,7 +225,6 @@
     {
       "id": "2",
       "name": "Millennium Falcon",
-      "model": "YT-1300 light freighter",
       "image": "milleniumfalcon.jpg",
       "manufacturer": "Corellian Engineering Corporation",
       "armaments": [
@@ -335,7 +333,6 @@
     {
       "id": "3",
       "name": "Death Star",
-      "model": "DS-1 Orbital Battle Station",
       "image": "deathstar.jpg",
       "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
       "armaments": [

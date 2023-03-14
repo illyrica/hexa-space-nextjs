@@ -1,6 +1,6 @@
-import { describe, vitest } from "vitest";
-import { getSpaceShips } from "./getSpaceShips";
-import { ShipFromCatalogue, ShipInYard } from "./types";
+import {describe, vitest} from "vitest";
+import {getSpaceShips} from "./getSpaceShips";
+import {ShipFromCatalogue, ShipInYard} from "./types";
 
 describe("getSpaceShips", () => {
   it("returns spaceship mapped to the domain", async () => {
@@ -29,7 +29,7 @@ describe("getSpaceShips", () => {
               value: 111087333333333,
               unit: "km",
             },
-            modelId: "123",
+            catalogId: "123",
             vehicleCondition: "new",
             constructionYear: 3451,
           },
