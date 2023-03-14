@@ -1,5 +1,6 @@
 export type ShipInYard = {
     "id": string,
+    "name": string,
     "creds": number,
     "fuelType": string,
     "image": string,

@@ -26,6 +26,7 @@ const exampleShipModellFromApi: ShipFromCatalogue = {
 
 const exampleShipInYardFromApi: ShipInYard = {
   id: "456",
+  name: "X-Wing Fighter 1000",
   creds: 50000,
   location: {
     name: "Tatooine",
@@ -60,7 +61,7 @@ describe("mapToDomainSpaceShips", () => {
     expect(result).toEqual([
       {
         id: "456",
-        name: "X-wing",
+        name: "X-Wing Fighter 1000",
         price: 50000,
         location: "Tatooine",
         image: "/xwing2.jpg",
@@ -69,15 +70,6 @@ describe("mapToDomainSpaceShips", () => {
         constructionYear: 3451,
       },
     ]);
-  });
-
-  it("should map a ship that is not in the catalogue to the default name 'unknown'", () => {
-    const result = mapToDomainSpaceShips({
-      inYard: [exampleShipInYardFromApi],
-      catalogue: [],
-    });
-
-    expect(result[0].name).toEqual("unknown");
   });
 
   it("should map a ship that is not in the catalogue to ship without speed", () => {

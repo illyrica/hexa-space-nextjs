@@ -9,6 +9,7 @@ describe("getSpaceShips", () => {
         Promise.resolve([
           {
             id: "456",
+            name: "X-Wing Fighter 1000",
             creds: 50000,
             location: {
               name: "Tatooine",
@@ -70,7 +71,7 @@ describe("getSpaceShips", () => {
     expect(result).toEqual([
       {
         id: "456",
-        name: "X-wing",
+        name: "X-Wing Fighter 1000",
         price: 50000,
         location: "Tatooine",
         image: "/xwing2.jpg",
