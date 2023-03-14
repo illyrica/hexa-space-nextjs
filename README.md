@@ -1,8 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+# Hexa-Space 
 ## Getting Started
 
-First, install dependencies.
+First checkout the repository and run the following command to install dependencies:
 
 ```bash
 npm install
@@ -17,19 +16,30 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-## Exercise
+## Exercises 1: May the 4th be with you
 
-### Exercise 1: May the 4th be with you!
+Goal of this exercise is to show space-ships that are on sale.
 
-#### Goal: Add the new business rule to the domain. Adjust the UI to show the reduced prices.
+### Step 1
 
-1. **_Business Rule: Every year on the 4th of May all spaceships prices are reduced by 10%._**
-2. also show Discount-Banner near the Price Display
-3. show original Price as strike through
+The first step is to mark a space-ship on sale if a space-ship is on sale.
 
-### Exercise 2: An elegant Weapon for a more civilized age
+### Step 2
 
-#### Goal: Calculate each ships weapon power and display it
+If a ship is on sale then the price is reduced by 10%. The old price should also be displayed but crossed out.
+
+### Step 3 
+
+The customer does not have to pay an interest rate if the space-ship is on sale.
+
+### Step 4
+
+The sales banner and the price reduction should only be show on May the 4th.
+
+
+## Exercise 2: An elegant Weapon for a more civilized age
+
+Goal of this exercise is to calculate each ships weapon power depending on how many weapons a ship posses and display it in the space-ship store-front.
 
 
 
