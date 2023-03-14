@@ -1,4 +1,3 @@
-'use client';
 export const postIncreaseClapsForId = async (id: string): Promise<{claps: number}> =>
   Object(await fetch(new Request("http://localhost:3000//api/incClapsForId", {
   method: "POST",

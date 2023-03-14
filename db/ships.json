@@ -53,7 +53,7 @@
     {
       "id": "1236",
       "name": "Millennium Falcon 987",
-      "modelId": "3",
+      "modelId": "2",
       "creds": 50000,
       "location": {
         "name": "Coruscant",
@@ -224,7 +224,7 @@
       "edited": "2014-12-20T21:23:49.886000Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Millennium Falcon",
       "model": "YT-1300 light freighter",
       "image": "milleniumfalcon.jpg",
