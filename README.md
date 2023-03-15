@@ -1,4 +1,4 @@
-# Hexa-Space 
+# Hexa-Space
 ## Getting Started
 
 First checkout the repository and run the following command to install dependencies:
@@ -28,13 +28,13 @@ The first step is to mark a space-ship on sale if a space-ship is on sale.
 
 If a ship is on sale then the price is reduced by 10%. The old price should also be displayed but crossed out.
 
-### Step 3 
+### Step 3
 
 The customer does not have to pay an interest rate if the space-ship is on sale.
 
 ### Step 4
 
-The sales banner and the price reduction should only be show on May the 4th.
+The sales banner and the price reduction should also apply on May the 4th on all products.
 
 
 ## Exercise 2: An elegant Weapon for a more civilized age
