@@ -1,5 +1,5 @@
-import { getWeaponInventory } from '@/bounded_contexts/weapon-overview/api-adapter/getWeaponInventory';
-import { WeaponComponent } from '@/bounded_contexts/weapon-overview/ui/weapon-component';
+import { getWeaponInventory } from '@/bounded_contexts/weapon-inventory/api-adapter/getWeaponInventory';
+import { WeaponComponent } from '@/bounded_contexts/weapon-overview/ui-adapter/weapon-component';
 import styles from '../page.module.css';
 
 

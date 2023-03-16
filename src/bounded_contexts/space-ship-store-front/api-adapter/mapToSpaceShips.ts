@@ -1,5 +1,5 @@
-import {MileageInLightYears, SpaceShip} from "../domain/space-ship";
-import {ShipFromCatalogue, ShipInYard} from "./types";
+import { MileageInLightYears, SpaceShip } from "../domain/space-ship";
+import { ShipFromCatalogue, ShipInYard } from "./types";
 
 export const mapToDomainSpaceShips = ({
   inYard,

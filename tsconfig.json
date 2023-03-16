@@ -31,7 +31,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/bounded_contexts/weapon-overview/ui/weapon.tss"
+    "src/bounded_contexts/weapon-inventory/ui-adapter/weapon.tss"
   ],
   "exclude": ["node_modules"]
 }
