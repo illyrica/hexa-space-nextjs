@@ -5,7 +5,7 @@
       "name": "X-Wing Fighter 1000",
       "catalogId": "1",
       "creds": 50000,
-      "onSale": "true",
+      "onSale": "yes",
       "location": {
         "name": "Tatooine",
         "rotation_period": "23",
@@ -30,7 +30,7 @@
       "id": "1235",
       "name": "Custom Pink Death Star",
       "catalogId": "3",
-      "onSale": "false",
+      "onSale": "active",
       "creds": 50000,
       "location": {
         "name": "Alderaan",
@@ -82,7 +82,7 @@
       "id": "1237",
       "name": "X-Wing 4000",
       "catalogId": "1",
-      "onSale": "true",
+      "onSale": "no promo",
       "creds": 50000,
       "location": {
         "name": "Tatooine",
