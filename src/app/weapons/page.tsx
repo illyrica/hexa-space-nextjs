@@ -1,7 +1,6 @@
-import { getWeaponInventory } from '@/bounded_contexts/weapon-inventory/api-adapter/getWeaponInventory';
-import { WeaponComponent } from '@/bounded_contexts/weapon-overview/ui-adapter/weapon-component';
+import {getWeaponInventory} from '@/bounded_contexts/weapon-inventory/api-adapter/getWeaponInventory';
+import {WeaponComponent} from '@/bounded_contexts/weapon-inventory/ui-adapter/weapon-component';
 import styles from '../page.module.css';
-
 
 
 export default async function Ships() {
