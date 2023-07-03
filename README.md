@@ -20,6 +20,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Goal of this exercise is to show space-ships that are on sale.
 
+Hint: There is an example for a styled sales label in line `src/bounded_contexts/space-ship-store-front/ui-adapter/ship-component.tsx:49` you can use to display the sales label.
+
 ### Step 1
 
 The first step is to mark a space-ship on sale if a space-ship is on sale.
@@ -39,7 +41,7 @@ The sales banner and the price reduction should also apply on May the 4th on all
 
 ## Exercise 2: An elegant Weapon for a more civilized age
 
-Goal of this exercise is to calculate each ships weapon power depending on how many weapons a ship posses and display it in the space-ship store-front.
+Goal of this exercise is to calculate each ships weapon power depending on how many weapons a ship poses and display it in the space-ship store-front.
 
 
 

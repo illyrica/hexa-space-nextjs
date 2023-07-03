@@ -149,3 +149,20 @@ a {
   flex-direction: row;
   display: flex;
 }
+
+.sales-label {
+  background-color: #ff0000; /* Red */
+  padding: 6px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+}
+
+.sales-label span {
+
+  color: #ffffff; /* White */
+  font-size: 14px;
+  font-weight: bold;
+}

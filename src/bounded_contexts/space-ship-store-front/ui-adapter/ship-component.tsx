@@ -1,9 +1,9 @@
 "use client";
 
 import Image from 'next/image';
-import { useState } from 'react';
+import {useState} from 'react';
 import {DEFAULT_NUM_OF_MONTH, monthlyRate, SpaceShip} from '../domain/space-ship';
-import { Clapper } from './clapper';
+import {Clapper} from './clapper';
 
 export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistClapInc: (id: string) => Promise<{claps: number}>}) => {
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH)
@@ -26,7 +26,9 @@ export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistC
       <li><b>Built</b>: {ship.constructionYear}</li>
       <li><b>Price</b>:
         <span data-testid="ship-price"> {ship.price}</span>
+        <br />
       </li>
+
       <li>
         <br />
         <input
@@ -44,7 +46,12 @@ export const ShipComponent = ({ship, persistClapInc}: {ship: SpaceShip, persistC
       </li>
 
       <Clapper numberOfClaps={ship.claps?? 0} persistInc={() => persistClapInc(ship.id)}/>
-
+      {/*
+        Example for a styled sales label!
+      <li>
+        <div className="sales-label"><span >Sale</span></div>
+      </li>
+      */}
     </ul>
     </div>
   </>
