@@ -4,6 +4,7 @@ import {ShipInYard} from "./types";
 
 const example: ShipInYard = {
   id: "29",
+  name: "X-Wing Fighter 1000",
   creds: 50000,
   fuelType: "hypermatter",
   image: "/xwing2.jpg",
