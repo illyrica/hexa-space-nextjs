@@ -41,7 +41,17 @@ The sales banner and the price reduction should also apply on May the 4th on all
 
 ## Exercise 2: An elegant Weapon for a more civilized age
 
-Goal of this exercise is to calculate each ships weapon power depending on how many weapons a ship poses and display it in the space-ship store-front.
+Goal of this exercise is to calculate the weapon power for the weapon inventory. If the imperial controller appear, you have to have a list of your weapons and weapon power ready.
 
+### Step 1
 
+Display the number of weapons of each type.
+
+## Step 2
+
+Assign a weapon power to each kind of weapon and display a summarized weapon power per weapon type
+
+## Step 3
+
+Display a aggregated weapon power for the whole inventory
 
