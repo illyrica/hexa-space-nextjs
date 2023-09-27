@@ -1,6 +1,6 @@
 'use client';
 
-import { postIncreaseClapsForId } from "@/bounded_contexts/space-ship-store-front/api-adapter/postIncreaseClapsForId";
+import { postIncreaseClapsForId } from "../../bounded_contexts/space-ship-store-front/clap-adapter/postIncreaseClapsForId";
 import { SpaceShip } from "@/bounded_contexts/space-ship-store-front/domain/space-ship";
 import { ShipComponent } from "@/bounded_contexts/space-ship-store-front/ui-adapter/ship-component";
 
