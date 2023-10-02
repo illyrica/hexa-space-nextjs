@@ -1,0 +1,27 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+  "name": "hexagonal frontend architecture",
+  "build": {
+    // Sets the run context to one level up instead of the .devcontainer folder.
+    "context": ".",
+    // Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--init"
+  ],
+  "overrideCommand": false,
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "pkief.material-icon-theme",
+        "zixuanchen.vitest-explorer"
+      ]
+    }
+  },
+  "forwardPorts": [
+    3000
+  ]
+}
