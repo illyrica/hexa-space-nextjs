@@ -1,0 +1,13 @@
+.ship p {
+  color: darkgray;
+}
+
+.ship {
+  display: flex;
+  margin: 10px;
+  flex-direction: row;
+  border: 1px solid red;
+  padding: 5px;
+  width: 450px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}

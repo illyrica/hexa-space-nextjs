@@ -12,7 +12,7 @@ import {
 import { Clapper } from "./clapper";
 import { RatesComponent } from "./rates-component";
 
-export const ShipComponent = ({
+export const ShipDetailsComponent = ({
   ship,
   persistClapInc,
 }: {
