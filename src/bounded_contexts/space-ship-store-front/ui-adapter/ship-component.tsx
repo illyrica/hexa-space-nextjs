@@ -11,6 +11,7 @@ import {
 } from "../domain/space-ship";
 import { Clapper } from "./clapper";
 import { RatesComponent } from "./rates-component";
+import {useRouter} from "next/navigation";
 
 export const ShipComponent = ({
   ship,
@@ -19,10 +20,11 @@ export const ShipComponent = ({
   ship: SpaceShip;
   persistClapInc: incClaps;
 }) => {
+  const router = useRouter()
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
   return (
     <>
-      <div className={styles.ship}>
+      <div className={styles.ship} onClick={()=>router.push("shipdetails/"+ ship.id)}>
         <div>
           <Image
             src={`/images${ship.image}`}
@@ -75,12 +77,6 @@ export const ShipComponent = ({
             numberOfClaps={ship.claps ?? 0}
             persistInc={() => persistClapInc(ship.id)}
           />
-          {/*
-        Example for a styled sales label!
-      <div>
-        <div className="sales-label"><span >Sale</span></div>
-      </div>
-      */}
         </div>
       </div>
     </>

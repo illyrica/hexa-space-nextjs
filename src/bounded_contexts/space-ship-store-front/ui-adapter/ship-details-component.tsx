@@ -22,6 +22,7 @@ export const ShipDetailsComponent = ({
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
   return (
     <>
+      <h3>{ship.name}</h3>
       <div className={styles.ship}>
         <div>
           <Image
@@ -75,12 +76,6 @@ export const ShipDetailsComponent = ({
             numberOfClaps={ship.claps ?? 0}
             persistInc={() => persistClapInc(ship.id)}
           />
-          {/*
-        Example for a styled sales label!
-      <div>
-        <div className="sales-label"><span >Sale</span></div>
-      </div>
-      */}
         </div>
       </div>
     </>

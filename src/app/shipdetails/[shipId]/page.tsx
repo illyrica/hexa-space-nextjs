@@ -1,16 +1,15 @@
-import { ShipComponent } from "@/bounded_contexts/space-ship-store-front/ui-adapter/ship-component";
-import { ShipDetailsComponent } from "@/bounded_contexts/space-ship-store-front/ui-adapter/ship-details-component";
-import Link from "next/link";
-import styles from "./shipdetails.module.css";
+import {getSpaceShip} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShip";
+import ShipDetails from "@/app/shipdetails/[shipId]/ship-details";
 
-export default async function ShipDetails({
-  params,
+export default async function ShipDetailsPage({
+  params: {shipId},
 }: {
   params: { shipId: string };
 }) {
-  return (
+  const ship = await getSpaceShip(shipId)
+  return ship && (
     <main>
-      <h1>Foo {params.shipId}</h1>
+        <ShipDetails ship={ship} />
     </main>
   );
 }
