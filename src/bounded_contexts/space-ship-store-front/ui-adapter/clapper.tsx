@@ -15,7 +15,10 @@ export const Clapper = ({
       <div className="clapper">
         <div
           style={{ margin: 10 }}
-          onClick={async () => setClaps(await (await persistInc()).claps)}
+          onClick={async (e) => {
+            e.stopPropagation();
+            setClaps(await (await persistInc()).claps);
+          }}
         >
           <img
             src="images/clap.png"

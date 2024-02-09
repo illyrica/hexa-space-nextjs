@@ -23,7 +23,7 @@ export const ShipDetailsComponent = ({
   return (
     <>
       <h3>{ship.name}</h3>
-      <div className={styles.ship}>
+      <div className={styles.shipDetails}>
         <div>
           <Image
             src={`/images${ship.image}`}
