@@ -22,59 +22,60 @@ export const ShipDetailsComponent = ({
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
   return (
     <>
-      <h3>{ship.name}</h3>
-      <div className={styles.shipDetails}>
-        <div>
-          <Image
-            src={`/images${ship.image}`}
-            height={256}
-            width={256}
-            alt="{Bild}"
-            priority
-          />
-          <p>{ship.name}</p>
-        </div>
-        <div className="ship-data">
+      <div className={styles.shipDetailsContainer}>
+        <h3>{ship.name}</h3>
+        <div className={styles.shipDetails}>
           <div>
-            <b>Location</b>: {ship.location}
-          </div>
-          {ship.mileage && (
-            <div>
-              <b>Mileage (ly)</b>:{" "}
-              <span data-testid="ship-mileage"> {ship.mileage}</span>
-            </div>
-          )}
-          <div>
-            <b>Speed</b>: {ship.speed} LY/sec
-          </div>
-          <div>
-            <b>Built</b>: {ship.constructionYear}
-          </div>
-          <div>
-            <b>Price</b>:<span data-testid="ship-price"> {ship.price}</span>
-            <br />
-          </div>
-
-          <div>
-            <br />
-            <RatesComponent
-              numberOfRates={numberOfRates}
-              setNumberOfRates={setNumberOfRates}
+            <Image
+                src={`/images${ship.image}`}
+                height={256}
+                width={500}
+                alt="{Bild}"
+                priority
             />
-            <br />
-            <div>Pay in {numberOfRates} Rates</div>
           </div>
-          <div>
-            <b>Monthly Rate</b>:
-            <span data-testid="monthly-rate">
-              {" "}
+          <div className={styles.detailsAndPrice}>
+            <div className={styles.shipData}>
+              <b>Data</b>
+              <div>
+                <b>Location:</b>{ship.location}
+              </div>
+              {ship.mileage && (
+                  <div>
+                    <b>Mileage (ly)</b>:{" "}
+                    <span data-testid="ship-mileage"> {ship.mileage}</span>
+                  </div>
+              )}
+              <div>
+                <b>Speed:</b>{ship.speed} LY/sec
+              </div>
+              <div>
+                <b>Built:</b>{ship.constructionYear}
+              </div>
+              <div>
+                <b>Price:</b><span data-testid="ship-price">{ship.price}</span>
+              </div>
+            </div>
+            <div className={styles.shipData}>
+              <b>Payment</b>
+              <div>
+                  <RatesComponent
+                      numberOfRates={numberOfRates}
+                      setNumberOfRates={setNumberOfRates}
+                  />
+                  <div>Pay in {numberOfRates} Rates</div>
+              </div>
+              <div>
+                <b>Monthly Rate: </b>
+                <span data-testid="monthly-rate">
               {monthlyRate(ship, numberOfRates).toFixed(2)}
-            </span>
+                </span>
+              </div>
+            </div>
           </div>
-
           <Clapper
-            numberOfClaps={ship.claps ?? 0}
-            persistInc={() => persistClapInc(ship.id)}
+              numberOfClaps={ship.claps ?? 0}
+              persistInc={() => persistClapInc(ship.id)}
           />
         </div>
       </div>

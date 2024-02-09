@@ -35,26 +35,22 @@ export const ShipComponent = ({
           />
           <p>{ship.name}</p>
         </div>
-        <div className="ship-data">
-          <div>
-            <b>Location:</b>{ship.location}
-          </div>
+        <div className={styles.shipData}>
           {ship.mileage && (
-            <div>
-              <b>Mileage (ly)</b>:{" "}
-              <span data-testid="ship-mileage"> {ship.mileage}</span>
-            </div>
+              <div>
+                <b>Mileage (ly)</b>:{" "}
+                <span data-testid="ship-mileage"> {ship.mileage}</span>
+              </div>
           )}
-          <div>
-            <b>Speed:</b>{ship.speed} LY/sec
-          </div>
-          <div>
-            <b>Built:</b>{ship.constructionYear}
-          </div>
-          <div>
+          <div className="flex-column">
             <b>Price:</b><span data-testid="ship-price">{ship.price}</span>
           </div>
-
+          <div className="flex-column">
+            <b>Monthly Rate:</b>
+            <span data-testid="monthly-rate">
+              {monthlyRate(ship, numberOfRates).toFixed(2)}
+            </span>
+          </div>
           <div>
             <div className="rates">
               <RatesComponent
@@ -64,16 +60,11 @@ export const ShipComponent = ({
               <div>Pay in {numberOfRates} Rates</div>
             </div>
           </div>
-          <div>
-            <b>Monthly Rate:</b>
-            <span data-testid="monthly-rate">
-              {monthlyRate(ship, numberOfRates).toFixed(2)}
-            </span>
-          </div>
+
 
           <Clapper
-            numberOfClaps={ship.claps ?? 0}
-            persistInc={() => persistClapInc(ship.id)}
+              numberOfClaps={ship.claps ?? 0}
+              persistInc={() => persistClapInc(ship.id)}
           />
         </div>
       </div>
