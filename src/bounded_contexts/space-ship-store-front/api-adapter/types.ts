@@ -22,6 +22,7 @@ export type ShipInYard = {
     "catalogId": string,
     "vehicleCondition": string,
     "constructionYear": number
+    "type": "ship" | "star" | "weapon"
   };
 
 export type ShipFromCatalogue = {

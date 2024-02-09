@@ -21,6 +21,7 @@ export const mapToDomainSpaceShips = ({
       image: ship.image,
       name: ship.name,
       speed: shipModel ? Number(shipModel.max_atmosphering_speed) : undefined,
+      type: ship.type
     };
   });
 };

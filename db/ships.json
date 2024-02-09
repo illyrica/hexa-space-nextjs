@@ -24,7 +24,8 @@
         "unit": "km"
       },
       "vehicleCondition": "new",
-      "constructionYear": 7700
+      "constructionYear": 7700,
+      "type": "ship"
     },
     {
       "id": "1235",
@@ -50,7 +51,8 @@
         "number": 42333333111214,
         "unit": "miles"
       },
-      "constructionYear": 7727
+      "constructionYear": 7727,
+      "type": "star"
     },
     {
       "id": "1236",
@@ -76,7 +78,8 @@
         "number": 4.2,
         "unit": "light years"
       },
-      "constructionYear": 3451
+      "constructionYear": 3451,
+      "type": "ship"
     },
     {
       "id": "1237",
@@ -101,7 +104,8 @@
         "number": 2,
         "unit": "light years"
       },
-      "constructionYear": 3451
+      "constructionYear": 3451,
+      "type": "ship"
     },
     {
       "id": "1238",
@@ -127,7 +131,8 @@
         "number": 2010998887770,
         "unit": "km"
       },
-      "constructionYear": 3451
+      "constructionYear": 3451,
+      "type": "star"
     }
   ],
   "catalogue": [

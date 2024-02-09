@@ -8,6 +8,7 @@ export type SpaceShip = {
   speed?: number;
   constructionYear: number;
   claps?: number;
+  type: "ship" | "star" | "weapon"
 };
 
 export type MileageInLightYears = number;
