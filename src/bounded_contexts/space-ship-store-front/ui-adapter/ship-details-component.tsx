@@ -11,20 +11,19 @@ import {
 } from "../domain/space-ship";
 import { Clapper } from "./clapper";
 import { RatesComponent } from "./rates-component";
-import {useRouter} from "next/navigation";
 
-export const ShipComponent = ({
+export const ShipDetailsComponent = ({
   ship,
   persistClapInc,
 }: {
   ship: SpaceShip;
   persistClapInc: incClaps;
 }) => {
-  const router = useRouter()
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
   return (
     <>
-      <div className={styles.ship} onClick={()=>router.push("shipdetails/"+ ship.id)}>
+      <h3>{ship.name}</h3>
+      <div className={styles.shipDetails}>
         <div>
           <Image
             src={`/images${ship.image}`}
