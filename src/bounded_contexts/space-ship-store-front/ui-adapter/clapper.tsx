@@ -27,7 +27,6 @@ export const Clapper = ({
         </div>
         <span
           className="number-of-claps"
-          style={{ marginLeft: 20, marginTop: 20 }}
         >
           {claps}
         </span>
