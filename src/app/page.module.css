@@ -1,9 +1,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 6rem;
+  gap: 5rem;
+  height: 100%;
 }
 
 .description {

@@ -50,10 +50,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #333;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -63,13 +64,8 @@ body {
 }
 
 a {
-  color: "inherit";
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  color: inherit;
+  text-decoration: none;
 }
 
 .ship-catalogue {
@@ -93,7 +89,6 @@ a {
   flex-wrap: nowrap;
   width: 100%;
   list-style-type: none;
-  color: grey;
   gap: 1.5rem;
   justify-content: space-between;
 }
