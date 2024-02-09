@@ -11,6 +11,15 @@ export type SpaceShip = {
   type: "ship" | "star" | "weapon"
 };
 
+export type CatalogueSpaceShip = {
+  id: string;
+  name: string;
+  image: string;
+  speed?: number;
+  type: "ship" | "star" | "weapon"
+  inStock: number;
+};
+
 export type MileageInLightYears = number;
 
 const INTEREST_RATE = 1.1;
