@@ -10,8 +10,8 @@ export default async function Ships() {
   const shipsWithClaps = attachClapsToShips({claps, ships});
 
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <ShipCatalogue shipsWithClaps={shipsWithClaps}/>
-    </main>
+    </div>
   )
 }
