@@ -37,7 +37,7 @@ export const ShipComponent = ({
         </div>
         <div className="ship-data">
           <div>
-            <b>Location</b>: {ship.location}
+            <b>Location:</b>{ship.location}
           </div>
           {ship.mileage && (
             <div>
@@ -46,29 +46,27 @@ export const ShipComponent = ({
             </div>
           )}
           <div>
-            <b>Speed</b>: {ship.speed} LY/sec
+            <b>Speed:</b>{ship.speed} LY/sec
           </div>
           <div>
-            <b>Built</b>: {ship.constructionYear}
+            <b>Built:</b>{ship.constructionYear}
           </div>
           <div>
-            <b>Price</b>:<span data-testid="ship-price"> {ship.price}</span>
-            <br />
+            <b>Price:</b><span data-testid="ship-price">{ship.price}</span>
           </div>
 
           <div>
-            <br />
-            <RatesComponent
-              numberOfRates={numberOfRates}
-              setNumberOfRates={setNumberOfRates}
-            />
-            <br />
-            <div>Pay in {numberOfRates} Rates</div>
+            <div className="rates">
+              <RatesComponent
+                  numberOfRates={numberOfRates}
+                  setNumberOfRates={setNumberOfRates}
+              />
+              <div>Pay in {numberOfRates} Rates</div>
+            </div>
           </div>
           <div>
-            <b>Monthly Rate</b>:
+            <b>Monthly Rate:</b>
             <span data-testid="monthly-rate">
-              {" "}
               {monthlyRate(ship, numberOfRates).toFixed(2)}
             </span>
           </div>

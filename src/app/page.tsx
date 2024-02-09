@@ -5,7 +5,7 @@ export default async function Home() {
     return (
       <main className={styles.main}>
         <h1>Welcome to Hexa Space Inc.</h1>
-        <p>Browse our our collection of fine <Link href={{pathname: "/ships"}}>space ships</Link></p>
+        <p><Link href={{pathname: "/ships"}}>Browse our our collection of fine space ships</Link></p>
       </main>
     )
   }
