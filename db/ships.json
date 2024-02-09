@@ -24,8 +24,7 @@
         "unit": "km"
       },
       "vehicleCondition": "new",
-      "constructionYear": 7700,
-      "type": "ship"
+      "constructionYear": 7700
     },
     {
       "id": "1235",
@@ -51,8 +50,7 @@
         "number": 42333333111214,
         "unit": "miles"
       },
-      "constructionYear": 7727,
-      "type": "star"
+      "constructionYear": 7727
     },
     {
       "id": "1236",
@@ -78,8 +76,7 @@
         "number": 4.2,
         "unit": "light years"
       },
-      "constructionYear": 3451,
-      "type": "ship"
+      "constructionYear": 3451
     },
     {
       "id": "1237",
@@ -104,8 +101,7 @@
         "number": 2,
         "unit": "light years"
       },
-      "constructionYear": 3451,
-      "type": "ship"
+      "constructionYear": 3451
     },
     {
       "id": "1238",
@@ -131,8 +127,7 @@
         "number": 2010998887770,
         "unit": "km"
       },
-      "constructionYear": 3451,
-      "type": "star"
+      "constructionYear": 3451
     }
   ],
   "catalogue": [
@@ -229,6 +224,7 @@
           "release_date": "1983-05-25"
         }
       ],
+      "type": "ship",
       "created": "2014-12-12T11:19:05.340000Z",
       "edited": "2014-12-20T21:23:49.886000Z"
     },
@@ -337,6 +333,7 @@
           "release_date": "1983-05-25"
         }
       ],
+      "type": "ship",
       "created": "2014-12-10T16:59:45.094000Z",
       "edited": "2014-12-20T21:23:49.880000Z"
     },
@@ -372,6 +369,7 @@
           "release_date": "1977-05-25"
         }
       ],
+      "type": "star",
       "created": "2014-12-10T16:36:50.509000Z",
       "edited": "2014-12-20T21:26:24.783000Z"
     }
