@@ -4,6 +4,7 @@
       "id": "1234",
       "name": "X-Wing Fighter 1000",
       "catalogId": "1",
+      "inStock": "5",
       "creds": 50000,
       "onSale": "yes",
       "location": {
@@ -30,6 +31,7 @@
       "id": "1235",
       "name": "Custom Pink Death Star",
       "catalogId": "3",
+      "inStock": "1",
       "onSale": "active",
       "creds": 50000,
       "location": {
@@ -56,6 +58,7 @@
       "id": "1236",
       "name": "Millennium Falcon 987",
       "catalogId": "2",
+      "inStock": "0",
       "onSale": "false",
       "creds": 50000,
       "location": {
@@ -82,6 +85,7 @@
       "id": "1237",
       "name": "X-Wing 4000",
       "catalogId": "1",
+      "inStock": "10",
       "onSale": "no promo",
       "creds": 50000,
       "location": {
@@ -107,6 +111,7 @@
       "id": "1238",
       "name": "Death Star 3",
       "catalogId": "3",
+      "inStock": "4",
       "onSale": "false",
       "creds": 50000,
       "location": {
@@ -133,6 +138,7 @@
       "id": "1239",
       "name": "Star Destroyer Imperial",
       "catalogId": "4",
+      "inStock": "4",
       "onSale": "false",
       "creds": 49999,
       "location": {
@@ -159,6 +165,7 @@
       "id": "1240",
       "name": "Star Destroyer Venator",
       "catalogId": "4",
+      "inStock": "12",
       "onSale": "false",
       "creds": 45000,
       "location": {

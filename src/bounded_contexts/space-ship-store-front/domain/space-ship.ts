@@ -1,5 +1,6 @@
 export type SpaceShip = {
   id: string;
+  inStock: number;
   name: string;
   price: number;
   location: string;

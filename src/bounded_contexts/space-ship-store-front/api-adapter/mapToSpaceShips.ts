@@ -14,6 +14,7 @@ export const mapToDomainSpaceShips = ({
     );
     return {
       id: ship.id,
+      inStock: ship.inStock,
       price: ship.creds,
       location: ship.location.name,
       mileage: ship.mileage ? mileageToLightYears(ship.mileage) : undefined,
