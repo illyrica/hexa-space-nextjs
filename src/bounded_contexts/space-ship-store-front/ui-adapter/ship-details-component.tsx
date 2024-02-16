@@ -20,6 +20,7 @@ export const ShipDetailsComponent = ({
   persistClapInc: incClaps;
 }) => {
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
+  const availabilityClass = ship.inStock > 0 ? (ship.inStock > 5 ? "bg-green-500" : "bg-yellow-500") : "bg-red-500"
   return (
     <>
       <div className={styles.shipDetailsContainer}>
@@ -59,11 +60,11 @@ export const ShipDetailsComponent = ({
             <div className={styles.shipData}>
               <b>Payment</b>
               <div>
-                  <RatesComponent
-                      numberOfRates={numberOfRates}
-                      setNumberOfRates={setNumberOfRates}
-                  />
-                  <div>Pay in {numberOfRates} Rates</div>
+                <RatesComponent
+                    numberOfRates={numberOfRates}
+                    setNumberOfRates={setNumberOfRates}
+                />
+                <div>Pay in {numberOfRates} Rates</div>
               </div>
               <div>
                 <b>Monthly Rate: </b>
@@ -71,6 +72,9 @@ export const ShipDetailsComponent = ({
               {monthlyRate(ship, numberOfRates).toFixed(2)}
                 </span>
               </div>
+              <b>Availability</b>
+                <span
+                  className={'border border-gray-500 rounded-3xl w-[24px] h-[24px] ' + availabilityClass}/>
             </div>
           </div>
           <Clapper
