@@ -128,6 +128,32 @@
         "unit": "km"
       },
       "constructionYear": 3451
+    },
+    {
+      "id": "1239",
+      "name": "Star Destroyer 1",
+      "catalogId": "4",
+      "onSale": "false",
+      "creds": 50000,
+      "location": {
+        "name": "Alderaan",
+        "rotation_period": "24",
+        "orbital_period": "364",
+        "diameter": "12500",
+        "climate": "temperate",
+        "gravity": "1 standard",
+        "terrain": "grasslands, mountains",
+        "surface_water": "40",
+        "population": "2000000000"
+      },
+      "fuelType": "hypermatter",
+      "vehicleCondition": "3 years in hanger bay",
+      "image": "/starDestroyer.jpg",
+      "mileage": {
+        "number": 2010998887770,
+        "unit": "km"
+      },
+      "constructionYear": 3451
     }
   ],
   "catalogue": [
@@ -370,6 +396,32 @@
         }
       ],
       "type": "star",
+      "created": "2014-12-10T16:36:50.509000Z",
+      "edited": "2014-12-20T21:26:24.783000Z"
+    },
+    {
+      "id": "4",
+      "name": "Star Destroyer",
+      "image": "starDestroyer.jpg",
+      "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
+      "armaments": [
+        {
+          "name": "Superlaser",
+          "count": 1
+        }
+      ],
+      "cost_in_credits": "1000000000000",
+      "length": "120000",
+      "max_atmosphering_speed": "n/a",
+      "crew": "342,953",
+      "passengers": "843,342",
+      "cargo_capacity": "1000000000000",
+      "consumables": "3 years",
+      "hyperdrive_rating": "4.0",
+      "MGLT": "10",
+      "class": "battlestation",
+      "pilots": [],
+      "type": "destroyer",
       "created": "2014-12-10T16:36:50.509000Z",
       "edited": "2014-12-20T21:26:24.783000Z"
     }

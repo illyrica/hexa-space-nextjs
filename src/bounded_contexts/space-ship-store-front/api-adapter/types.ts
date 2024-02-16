@@ -67,5 +67,5 @@ export type ShipFromCatalogue = {
     }[],
   "created": string
   "edited": string
-  "type": "ship" | "star" | "weapon"
+  "type": "ship" | "star" | "destroyer"
 };
