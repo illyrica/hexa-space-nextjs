@@ -131,10 +131,10 @@
     },
     {
       "id": "1239",
-      "name": "Star Destroyer 1",
+      "name": "Star Destroyer Imperial",
       "catalogId": "4",
       "onSale": "false",
-      "creds": 50000,
+      "creds": 49999,
       "location": {
         "name": "Alderaan",
         "rotation_period": "24",
@@ -149,6 +149,32 @@
       "fuelType": "hypermatter",
       "vehicleCondition": "3 years in hanger bay",
       "image": "/starDestroyer.jpg",
+      "mileage": {
+        "number": 2010998887770,
+        "unit": "km"
+      },
+      "constructionYear": 3451
+    },
+    {
+      "id": "1240",
+      "name": "Star Destroyer Venator",
+      "catalogId": "4",
+      "onSale": "false",
+      "creds": 45000,
+      "location": {
+        "name": "Alderaan",
+        "rotation_period": "24",
+        "orbital_period": "364",
+        "diameter": "12500",
+        "climate": "temperate",
+        "gravity": "1 standard",
+        "terrain": "grasslands, mountains",
+        "surface_water": "40",
+        "population": "2000000000"
+      },
+      "fuelType": "hypermatter",
+      "vehicleCondition": "3 years in hanger bay",
+      "image": "/starDestroyer2.jpg",
       "mileage": {
         "number": 2010998887770,
         "unit": "km"

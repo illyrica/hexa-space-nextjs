@@ -14,7 +14,7 @@ const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]})
     { value: "all", displayName: "All"},
     { value: "ship", displayName: "Ships" },
     { value: "star", displayName: "Death Stars" },
-    { value: "destroyer", displayName: "Star Destroyer" }
+    { value: "destroyer", displayName: "Star Destroyers" }
   ];
 
 
