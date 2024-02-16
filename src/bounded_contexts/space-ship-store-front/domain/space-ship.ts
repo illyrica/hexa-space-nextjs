@@ -8,7 +8,7 @@ export type SpaceShip = {
   speed?: number;
   constructionYear: number;
   claps?: number;
-  type: "ship" | "star" | "weapon"
+  type: "ship" | "star" | "destroyer"
 };
 
 export type CatalogueSpaceShip = {
@@ -16,7 +16,7 @@ export type CatalogueSpaceShip = {
   name: string;
   image: string;
   speed?: number;
-  type: "ship" | "star" | "weapon"
+  type: "ship" | "star" | "destroyer"
   inStock: number;
 };
 
