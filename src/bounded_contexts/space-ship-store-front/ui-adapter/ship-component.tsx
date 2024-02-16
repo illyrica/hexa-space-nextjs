@@ -22,6 +22,7 @@ export const ShipComponent = ({
 }) => {
   const router = useRouter()
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
+  const availabilityClass = ship.inStock > 0 ? (ship.inStock > 5 ? "bg-green-500" : "bg-yellow-500") : "bg-red-500";
   return (
     <>
       <div className={styles.ship} onClick={()=>router.push("shipdetails/"+ ship.id)}>
@@ -42,6 +43,9 @@ export const ShipComponent = ({
                 <span data-testid="ship-mileage"> {ship.mileage}</span>
               </div>
           )}
+          <div className="flex-column">
+            <b>Availability:</b><span className={'border border-gray-500 rounded-3xl w-[24px] h-[24px] ' + availabilityClass} />
+          </div>
           <div className="flex-column">
             <b>Price:</b><span data-testid="ship-price">{ship.price}</span>
           </div>
