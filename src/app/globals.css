@@ -66,12 +66,6 @@ a {
   text-decoration: none;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem !important;
-}
-
 .ship-catalogue {
   display: flex;
   flex-direction: row;

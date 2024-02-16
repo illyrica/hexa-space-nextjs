@@ -17,12 +17,10 @@ const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]})
     { value: "destroyer", displayName: "Star Destroyers" }
   ];
 
-
-
   const determineShipsToDisplay = () => {
     const filteredShips = filter === "all" ? shipsWithClaps : shipsWithClaps.filter(ship => ship.type === filter);
     if (searchTerm.length > 0) {
-      return filteredShips.filter(ship => ship.name.startsWith(searchTerm));
+      return filteredShips.filter(ship => ship.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
     }
     return filteredShips;
   }
@@ -31,7 +29,7 @@ const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]})
 
   return (
       <>
-        <div className="flex flex-column items-center w-full">
+        <div className="flex flex-col items-center w-full">
           <div className="flex gap-2 my-4 items-center justify-center w-[450px]">
             <input type="text" placeholder="Search" onChange={(e) => setPreliminarySearchTerm(e.target.value)} className="p-2 w-[300px] border border-gray-200 grow-1"/>
             <div>
