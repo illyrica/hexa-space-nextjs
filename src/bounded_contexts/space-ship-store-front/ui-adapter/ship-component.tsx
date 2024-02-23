@@ -43,13 +43,13 @@ export const ShipComponent = ({
                 <span data-testid="ship-mileage"> {ship.mileage}</span>
               </div>
           )}
-          <div className="flex-column">
+          <div className="flex flex-col">
             <b>Availability:</b><span className={'border border-gray-500 rounded-3xl w-[24px] h-[24px] ' + availabilityClass} />
           </div>
-          <div className="flex-column">
+          <div className="flex flex-col">
             <b>Price:</b><span data-testid="ship-price">{ship.price}</span>
           </div>
-          <div className="flex-column">
+          <div className="flex flex-col">
             <b>Monthly Rate:</b>
             <span data-testid="monthly-rate">
               {monthlyRate(ship, numberOfRates).toFixed(2)}

@@ -4,16 +4,16 @@ import {attachClapsToShips} from "@/bounded_contexts/space-ship-store-front/clap
 import Navigation from "@/bounded_contexts/space-ship-store-front/ui-adapter/navigation";
 import FilteredShipCatalogue from "@/bounded_contexts/space-ship-store-front/ui-adapter/filtered-ship-catalogue";
 
-export default async function Home() {
+export default async function Ships() {
     const ships = await getSpaceShips();
     const claps = await getClaps();
-    const shipsWithClaps = attachClapsToShips({claps, ships});
+    const shipsToDisplay = attachClapsToShips({claps, ships}).filter(ship => ship.type === "ship");
 
     return (
-      <div className="w-full flex flex-col items-center my-8 gap-12">
-          <Navigation selectedPage={"all"}/>
-          <div className="text-3xl mx-auto">Welcome to Hexa Space Inc.</div>
-          <FilteredShipCatalogue shipsWithClaps={shipsWithClaps}/>
-      </div>
-    )
-  }
+        <div className="w-full flex flex-col items-center my-8 gap-12">
+            <Navigation selectedPage={"ships"}/>
+            <div className="text-3xl mx-auto">Welcome to Hexa Space Inc.</div>
+            <FilteredShipCatalogue shipsWithClaps={shipsToDisplay}/>
+        </div>
+)
+}

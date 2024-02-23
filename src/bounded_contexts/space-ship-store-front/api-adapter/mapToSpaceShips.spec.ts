@@ -5,6 +5,7 @@ import {ShipFromCatalogue, ShipInYard} from "./types";
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: "123",
   name: "X-wing",
+  type: "ship",
   model: "T-65 X-wing",
   image: "xwing.jpg",
   manufacturer: "Incom Corporation",
@@ -28,6 +29,7 @@ const exampleShipInYardFromApi: ShipInYard = {
   id: "456",
   name: "X-Wing Fighter 1000",
   creds: 50000,
+  inStock: 5,
   location: {
     name: "Tatooine",
     rotation_period: "23",

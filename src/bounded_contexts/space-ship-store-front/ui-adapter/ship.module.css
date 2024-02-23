@@ -1,6 +1,5 @@
 .ship {
   display: flex;
-  margin: 10px;
   flex-direction: row;
   gap: 5rem;
   padding: 3rem;
