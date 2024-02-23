@@ -6,19 +6,15 @@ import {useState} from "react";
 import {SpaceShip} from "@/bounded_contexts/space-ship-store-front/domain/space-ship";
 
 const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]}) => {
-  const [filter, setFilter] = useState("all");
+  const [locationFilter, setLocationFilter] = useState("All");
   const [preliminarySearchTerm, setPreliminarySearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filterValues = [
-    { value: "all", displayName: "All"},
-    { value: "ship", displayName: "Ships" },
-    { value: "star", displayName: "Death Stars" },
-    { value: "destroyer", displayName: "Star Destroyers" }
-  ];
+  const locationFilterValues = ["All"];
+  new Set(shipsWithClaps.map(ship => ship.location).sort((a, b) => a.localeCompare(b))).forEach(location => locationFilterValues.push(location));
 
   const determineShipsToDisplay = () => {
-    const filteredShips = filter === "all" ? shipsWithClaps : shipsWithClaps.filter(ship => ship.type === filter);
+    const filteredShips = locationFilter === "All" ? shipsWithClaps : shipsWithClaps.filter(ship => ship.location === locationFilter);
     if (searchTerm.length > 0) {
       return filteredShips.filter(ship => ship.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
     }
@@ -36,24 +32,30 @@ const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]})
               <img src="/images/search.png" onClick={() => setSearchTerm(preliminarySearchTerm)} className="cursor-pointer"/>
             </div>
           </div>
-          <div className="flex gap-0 w-[450px] justify-center">
-            {filterValues.map(filterValue =>
-                <div onClick={() => setFilter(filterValue.value)}
-                     key={filterValue.value}
-                     className={`shrink-0 py-2 px-6 border border-solid border-gray-200 cursor-pointer ${filterValue.value === filter ? "bg-gray-200" : ""}`}>
-                  {filterValue.displayName}
-                </div>
-            )}
-          </div>
+          <div className="flex gap-8 flex-nowrap w-full px-4">
+            <div className="flex flex-col px-4 gap-4">
+              <div className="text-xl">Location</div>
+              <div className="flex flex-col">
+                {locationFilterValues.map(filterValue =>
+                    <div onClick={() => setLocationFilter(filterValue)}
+                         key={filterValue}
+                         className={`py-2 px-6 border border-solid border-gray-200 cursor-pointer ${filterValue === locationFilter ? "bg-gray-200" : ""}`}>
+                      {filterValue}
+                    </div>
+                )}
+              </div>
+            </div>
+
               {shipsToDisplay.length === 0 && (
                   <div className="w-full p-10 text-center">These are not the ships you are looking for...</div>
               )}
               {shipsToDisplay.length > 0 && (
                   <div className="w-full flex flex-row gap-4 flex-wrap justify-center">
                     {shipsToDisplay.map(ship => <ShipComponent key={ship.id} ship={ship}
-                                                            persistClapInc={postIncreaseClapsForId}/>)}
+                                                               persistClapInc={postIncreaseClapsForId}/>)}
                   </div>
               )}
+          </div>
         </div>
   </>);
 }
