@@ -1,17 +1,12 @@
-import {CatalogueSpaceShip, MileageInLightYears, SpaceShip} from "../domain/space-ship";
-import { ShipFromCatalogue, ShipInYard } from "./types";
+import { MileageInLightYears, SpaceShip} from "../domain/space-ship";
+import { ShipInYard } from "./types";
 
 export const mapToDomainSpaceShips = ({
   inYard,
-  catalogue,
 }: {
   inYard: ShipInYard[];
-  catalogue: ShipFromCatalogue[];
 }): SpaceShip[] => {
   return inYard.map((ship) => {
-    const shipModel = catalogue.find(
-      (shipFromCatalogue) => shipFromCatalogue.id === ship.catalogId
-    );
     return {
       id: ship.id,
       inStock: ship.inStock,
@@ -21,34 +16,11 @@ export const mapToDomainSpaceShips = ({
       constructionYear: ship.constructionYear,
       image: ship.image,
       name: ship.name,
-      speed: shipModel ? Number(shipModel.max_atmosphering_speed) : undefined,
-      type: shipModel?.type ?? 'ship'
-    };
-  });
-};
-
-export const mapToDomainCatalogueSpaceShips = ({
-                                        inYard,
-                                        catalogue,
-                                      }: {
-  inYard: ShipInYard[];
-  catalogue: ShipFromCatalogue[];
-}): CatalogueSpaceShip[] => {
-  return catalogue.map((ship) => {
-    const inStock = inYard.filter(
-        (shipInYard) => shipInYard.catalogId === ship.id
-    ).length;
-    return {
-      id: ship.id,
-      image: ship.image,
-      name: ship.name,
       speed: Number(ship.max_atmosphering_speed),
-      type: ship.type,
-      inStock
+      type: ship.type
     };
   });
 };
-
 
 export const miToRoundedLightYears = (miles: number): number => {
   return Math.round(0.00000000000017011 * miles * 10) / 10;

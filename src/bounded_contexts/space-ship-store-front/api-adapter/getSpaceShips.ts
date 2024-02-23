@@ -1,15 +1,6 @@
 import {getInYard} from './getInYard';
-import {getCatalogue} from './getCatalogue';
-import {mapToDomainCatalogueSpaceShips, mapToDomainSpaceShips} from './mapToSpaceShips';
+import {mapToDomainSpaceShips} from './mapToSpaceShips';
 
-export const getSpaceShips = async ({getInYard_ = getInYard, getCatalogue_ = getCatalogue} = {getInYard_ : getInYard, getCatalogue_ : getCatalogue})=>{
-    const [inYard, catalogue ] = await Promise.all([getInYard_(), getCatalogue_()])
-
-    return mapToDomainSpaceShips({inYard, catalogue})
-}
-
-export const getCatalogueSpaceShips = async ({getInYard_ = getInYard, getCatalogue_ = getCatalogue} = {getInYard_ : getInYard, getCatalogue_ : getCatalogue})=>{
-    const [inYard, catalogue ] = await Promise.all([getInYard_(), getCatalogue_()])
-
-    return mapToDomainCatalogueSpaceShips({inYard, catalogue})
+export const getSpaceShips = async ({getInYard_ = getInYard} = {getInYard_ : getInYard})=>{
+    return mapToDomainSpaceShips({inYard: await getInYard_()});
 }
