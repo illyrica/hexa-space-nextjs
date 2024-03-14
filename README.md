@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Goal of this exercise is to show space-ships that are on sale.
 
-Hint: There is an example for a styled sales label in line `src/bounded_contexts/space-ship-store-front/ui-adapter/ship-component.tsx:49` you can use to display the sales label.
+Hint: There is an example for a styled sales label in line `src/components/ship-component.tsx:49` you can use to display the sales label.
 
 ### Step 1
 

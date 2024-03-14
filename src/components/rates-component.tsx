@@ -1,5 +1,3 @@
-import styles from "./rates.module.css";
-
 export const RatesComponent = ({
   numberOfRates,
   setNumberOfRates,
@@ -8,7 +6,6 @@ export const RatesComponent = ({
   setNumberOfRates: (rates: number) => void;
 }) => (
   <input
-    className={styles.rates}
     data-testid="number-of-rates"
     type="range"
     id="rates"

@@ -3,14 +3,12 @@ import styles from "./ship.module.css";
 
 import Image from "next/image";
 import { useState } from "react";
+import { RatesComponent } from "./rates-component";
 import {
   DEFAULT_NUM_OF_MONTH,
   monthlyRate,
-  SpaceShip,
-} from "../domain/space-ship";
-import { Clapper } from "./clapper";
-import { RatesComponent } from "./rates-component";
-import {postIncreaseClapsForId} from "@/bounded_contexts/space-ship-store-front/clap-adapter/postIncreaseClapsForId";
+  SpaceShip
+} from "@/api/getSpaceShips";
 
 export const ShipDetailsComponent = ({
     ship,
@@ -78,10 +76,6 @@ export const ShipDetailsComponent = ({
                 </div>
               </div>
             </div>
-            <Clapper
-                numberOfClaps={claps}
-                persistInc={() => postIncreaseClapsForId(ship.id)}
-            />
           </div>
 
 
