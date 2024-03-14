@@ -3,24 +3,19 @@ import styles from "./ship.module.css";
 
 import Image from "next/image";
 import { useState } from "react";
-import { incClaps } from "../domain/incClaps";
+import { RatesComponent } from "./rates-component";
+import {useRouter} from "next/navigation";
 import {
   DEFAULT_NUM_OF_MONTH,
   monthlyRate,
-  SpaceShip,
-} from "../domain/space-ship";
-import { Clapper } from "./clapper";
-import { RatesComponent } from "./rates-component";
-import {useRouter} from "next/navigation";
+  SpaceShip
+} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips";
 
 export const ShipComponent = ({
   ship,
-  persistClapInc,
 }: {
   ship: SpaceShip;
-  persistClapInc: incClaps;
 }) => {
-  const router = useRouter()
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
   const availabilityClass = ship.inStock > 0 ? (ship.inStock > 5 ? "bg-green-500" : "bg-yellow-500") : "bg-red-500";
   return (
@@ -64,12 +59,6 @@ export const ShipComponent = ({
               <div>Pay in {numberOfRates} Rates</div>
             </div>
           </div>
-
-
-          <Clapper
-              numberOfClaps={ship.claps ?? 0}
-              persistInc={() => persistClapInc(ship.id)}
-          />
         </div>
       </div>
     </>

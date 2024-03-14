@@ -1,20 +1,19 @@
 'use client';
 
-import { postIncreaseClapsForId } from "../clap-adapter/postIncreaseClapsForId";
 import { ShipComponent } from "@/bounded_contexts/space-ship-store-front/ui-adapter/ship-component";
 import {useState} from "react";
-import {SpaceShip} from "@/bounded_contexts/space-ship-store-front/domain/space-ship";
+import {SpaceShip} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips";
 
-const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]}) => {
+const FilteredShipCatalogue = ({ships} : {ships: SpaceShip[]}) => {
   const [locationFilter, setLocationFilter] = useState("All");
   const [preliminarySearchTerm, setPreliminarySearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
   const locationFilterValues = ["All"];
-  new Set(shipsWithClaps.map(ship => ship.location).sort((a, b) => a.localeCompare(b))).forEach(location => locationFilterValues.push(location));
+  new Set(ships.map(ship => ship.location).sort((a, b) => a.localeCompare(b))).forEach(location => locationFilterValues.push(location));
 
   const determineShipsToDisplay = () => {
-    const filteredShips = locationFilter === "All" ? shipsWithClaps : shipsWithClaps.filter(ship => ship.location === locationFilter);
+    const filteredShips = locationFilter === "All" ? ships : ships.filter(ship => ship.location === locationFilter);
     if (searchTerm.length > 0) {
       return filteredShips.filter(ship => ship.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
     }
@@ -51,8 +50,7 @@ const FilteredShipCatalogue = ({shipsWithClaps} : {shipsWithClaps: SpaceShip[]})
               )}
               {shipsToDisplay.length > 0 && (
                   <div className="w-full flex flex-row gap-4 flex-wrap justify-center">
-                    {shipsToDisplay.map(ship => <ShipComponent key={ship.id} ship={ship}
-                                                               persistClapInc={postIncreaseClapsForId}/>)}
+                    {shipsToDisplay.map(ship => <ShipComponent key={ship.id} ship={ship}/>)}
                   </div>
               )}
           </div>
