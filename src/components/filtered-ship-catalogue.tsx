@@ -1,10 +1,10 @@
 'use client';
 
-import { ShipComponent } from "@/bounded_contexts/space-ship-store-front/ui-adapter/ship-component";
+import { ShipComponent } from "@/components/ship-component";
 import {useState} from "react";
-import {SpaceShip} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips";
-import SearchComponent from "@/bounded_contexts/space-ship-store-front/ui-adapter/search-component";
-import LocationFilterComponent from "@/bounded_contexts/space-ship-store-front/ui-adapter/location-filter";
+import {SpaceShip} from "@/api/getSpaceShips";
+import SearchComponent from "@/components/search-component";
+import LocationFilterComponent from "@/components/location-filter";
 
 const FilteredShipCatalogue = ({ships} : {ships: SpaceShip[]}) => {
   const [locationFilter, setLocationFilter] = useState("All");

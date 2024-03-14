@@ -1,6 +1,6 @@
-import {getSpaceShips} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips";
-import Navigation from "@/bounded_contexts/space-ship-store-front/ui-adapter/navigation";
-import FilteredShipCatalogue from "@/bounded_contexts/space-ship-store-front/ui-adapter/filtered-ship-catalogue";
+import {getSpaceShips} from "@/api/getSpaceShips";
+import Navigation from "@/components/navigation";
+import FilteredShipCatalogue from "@/components/filtered-ship-catalogue";
 
 export default async function Home() {
     const ships = await getSpaceShips();

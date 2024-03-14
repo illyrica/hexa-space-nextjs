@@ -7,7 +7,7 @@ import {
   DEFAULT_NUM_OF_MONTH,
   monthlyRate,
   SpaceShip
-} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips";
+} from "@/api/getSpaceShips";
 
 export const ShipComponent = ({
   ship,
