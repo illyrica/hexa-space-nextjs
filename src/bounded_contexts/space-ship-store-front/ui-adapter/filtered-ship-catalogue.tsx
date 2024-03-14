@@ -3,10 +3,11 @@
 import { ShipComponent } from "@/bounded_contexts/space-ship-store-front/ui-adapter/ship-component";
 import {useState} from "react";
 import {SpaceShip} from "@/bounded_contexts/space-ship-store-front/api-adapter/getSpaceShips";
+import SearchComponent from "@/bounded_contexts/space-ship-store-front/ui-adapter/search-component";
+import LocationFilterComponent from "@/bounded_contexts/space-ship-store-front/ui-adapter/location-filter";
 
 const FilteredShipCatalogue = ({ships} : {ships: SpaceShip[]}) => {
   const [locationFilter, setLocationFilter] = useState("All");
-  const [preliminarySearchTerm, setPreliminarySearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
   const locationFilterValues = ["All"];
@@ -25,25 +26,9 @@ const FilteredShipCatalogue = ({ships} : {ships: SpaceShip[]}) => {
   return (
       <>
         <div className="flex flex-col items-center w-full">
-          <div className="flex gap-2 my-4 items-center justify-center w-[450px]">
-            <input type="text" placeholder="Search" onChange={(e) => setPreliminarySearchTerm(e.target.value)} className="p-2 w-[300px] border border-gray-200 grow-1"/>
-            <div>
-              <img src="/images/search.png" onClick={() => setSearchTerm(preliminarySearchTerm)} className="cursor-pointer"/>
-            </div>
-          </div>
+          <SearchComponent executeSearch={(searchTerm) => setSearchTerm(searchTerm)} />
           <div className="flex gap-8 flex-nowrap w-full px-4">
-            <div className="flex flex-col px-4 gap-4">
-              <div className="text-xl">Location</div>
-              <div className="flex flex-col">
-                {locationFilterValues.map(filterValue =>
-                    <div onClick={() => setLocationFilter(filterValue)}
-                         key={filterValue}
-                         className={`py-2 px-6 border border-solid border-gray-200 cursor-pointer ${filterValue === locationFilter ? "bg-gray-200" : ""}`}>
-                      {filterValue}
-                    </div>
-                )}
-              </div>
-            </div>
+            <LocationFilterComponent currentFilter={locationFilter} locationFilterValues={locationFilterValues} filterByLocation={(filterValue) => setLocationFilter(filterValue)} />
 
               {shipsToDisplay.length === 0 && (
                   <div className="w-full p-10 text-center">These are not the ships you are looking for...</div>
