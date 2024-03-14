@@ -25,7 +25,7 @@ export const ShipComponent = ({
   const availabilityClass = ship.inStock > 0 ? (ship.inStock > 5 ? "bg-green-500" : "bg-yellow-500") : "bg-red-500";
   return (
     <>
-      <div className={styles.ship} onClick={()=>router.push("shipdetails/"+ ship.id)}>
+      <div className={styles.ship}>
         <div>
           <Image
             src={`/images${ship.image}`}
