@@ -10,9 +10,10 @@ import {
 } from "@/api/getSpaceShips";
 
 export const Ship = ({
-  ship,
+  ship, addToCart
 }: {
   ship: SpaceShip;
+  addToCart: (shipId: string) => void
 }) => {
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
   const availabilityClass = ship.inStock > 0 ? (ship.inStock > 5 ? "bg-green-500" : "bg-yellow-500") : "bg-red-500";
@@ -53,13 +54,14 @@ export const Ship = ({
             </span>
             </div>
             <div>
-              <div>
-                <Rates
-                    numberOfRates={numberOfRates}
-                    setNumberOfRates={setNumberOfRates}
-                />
-                <div>Pay in {numberOfRates} Rates</div>
-              </div>
+              <Rates
+                  numberOfRates={numberOfRates}
+                  setNumberOfRates={setNumberOfRates}
+              />
+              <div>Pay in {numberOfRates} Rates</div>
+            </div>
+            <div className="flex justify-end">
+              <img src={"/images/cart.png"} className="cursor-pointer" onClick={() => addToCart(ship.id)}/>
             </div>
           </div>
         </div>

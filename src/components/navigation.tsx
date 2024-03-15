@@ -2,7 +2,7 @@
 
 import {useRouter} from "next/navigation";
 
-const Navigation = ({selectedPage} : {selectedPage: string}) => {
+const Navigation = ({selectedPage, numItemsInCart} : {selectedPage: string, numItemsInCart: number}) => {
     const pages = [
         { value: "all", displayName: "All"},
         { value: "ships", displayName: "Ships" },
@@ -33,6 +33,10 @@ const Navigation = ({selectedPage} : {selectedPage: string}) => {
                             {filterValue.displayName}
                         </div>
                     )}
+                </div>
+                <div className="flex items-center">
+                    <img src={"/images/cart.png"} className="" width="24px" height="20px"/>
+                    <p className="bg-amber-500 rounded-full px-1">{numItemsInCart}</p>
                 </div>
             </div>
         </>);
