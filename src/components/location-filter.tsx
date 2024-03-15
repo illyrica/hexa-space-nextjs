@@ -1,6 +1,6 @@
 'use client';
 
-const LocationFilterComponent = ({currentFilter, locationFilterValues, filterByLocation} : {currentFilter: string, locationFilterValues: string[], filterByLocation: (location: string) => void}) => {
+const LocationFilter = ({currentFilter, locationFilterValues, filterByLocation} : {currentFilter: string, locationFilterValues: string[], filterByLocation: (location: string) => void}) => {
     return (
         <>
             <div className="flex flex-col px-4 gap-4">
@@ -18,4 +18,4 @@ const LocationFilterComponent = ({currentFilter, locationFilterValues, filterByL
         </>);
 }
 
-export default LocationFilterComponent;
+export default LocationFilter;

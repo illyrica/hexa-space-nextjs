@@ -1,4 +1,4 @@
-export const RatesComponent = ({
+export const Rates = ({
   numberOfRates,
   setNumberOfRates,
 }: {

@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { RatesComponent } from "./rates-component";
+import { Rates } from "./rates";
 import {
   DEFAULT_NUM_OF_MONTH,
   monthlyRate,
   SpaceShip
 } from "@/api/getSpaceShips";
 
-export const ShipComponent = ({
+export const Ship = ({
   ship,
 }: {
   ship: SpaceShip;
@@ -56,7 +56,7 @@ export const ShipComponent = ({
           </div>
           <div>
             <div>
-              <RatesComponent
+              <Rates
                   numberOfRates={numberOfRates}
                   setNumberOfRates={setNumberOfRates}
               />

@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 
-const SearchComponent = ({executeSearch} : {executeSearch: (searchTerm: string) => void}) => {
+const Search = ({executeSearch} : {executeSearch: (searchTerm: string) => void}) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     return (
@@ -18,4 +18,4 @@ const SearchComponent = ({executeSearch} : {executeSearch: (searchTerm: string) 
         </>);
 }
 
-export default SearchComponent;
+export default Search;
