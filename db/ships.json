@@ -20,7 +20,7 @@
       "fuelType": "hypermatter",
       "image": "/xwing2.jpg",
       "mileage": {
-        "number": 11102929384828387,
+        "value": 11102929384828387,
         "unit": "km"
       },
       "vehicleCondition": "new",
@@ -47,7 +47,7 @@
       "fuelType": "hypermatter",
       "vehicleCondition": "3 years in hanger bay",
       "mileage": {
-        "number": 42333333111214,
+        "value": 42333333111214,
         "unit": "miles"
       },
       "constructionYear": 7727
@@ -73,7 +73,7 @@
       "fuelType": "hypermatter",
       "image": "/millenniumFalconGreen.jpg",
       "mileage": {
-        "number": 4.2,
+        "value": 4.2,
         "unit": "light years"
       },
       "constructionYear": 3451
@@ -98,7 +98,7 @@
       "vehicleCondition": "accident free",
       "image": "/xwing4000.jpg",
       "mileage": {
-        "number": 2,
+        "value": 2,
         "unit": "light years"
       },
       "constructionYear": 3451
@@ -124,7 +124,7 @@
       "vehicleCondition": "3 years in hanger bay",
       "image": "/deathstarInHangerbay.jpg",
       "mileage": {
-        "number": 2010998887770,
+        "value": 2010998887770,
         "unit": "km"
       },
       "constructionYear": 3451

@@ -1,6 +1,6 @@
-import {describe} from "vitest";
-import {mapToDomainSpaceShips, mileageToLightYears} from "./mapToSpaceShips";
-import {ShipFromCatalogue, ShipInYard} from "./types";
+import { describe } from "vitest";
+import { mapToDomainSpaceShips, mileageToLightYears } from "./mapToSpaceShips";
+import { ShipFromCatalogue, ShipInYard } from "./types";
 
 const exampleShipModellFromApi: ShipFromCatalogue = {
   id: "123",
@@ -113,7 +113,7 @@ describe("mileageToLightYears", () => {
     expect(result).toEqual(7.8);
   });
 
-  it("converts mi into light years rounded by one decimal", () => {
+  it("does not convert cm into light years", () => {
     const result = mileageToLightYears({ value: 46000000000000, unit: "cm" });
 
     expect(result).toBeUndefined();

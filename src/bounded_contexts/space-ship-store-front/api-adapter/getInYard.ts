@@ -1,7 +1,10 @@
-import {ShipInYard} from './types';
+import { log } from "console";
+import { ShipInYard } from "./types";
 
-export const END_POINT = "http://localhost:3000/api/inYard";
+const cacheBuster = () => new Date().getTime();
 
-export const getInYard = async (fetch_ = fetch) : Promise<ShipInYard[]> => {
+export const END_POINT = "http://localhost:3000/api/inYard?" + cacheBuster();
+
+export const getInYard = async (fetch_ = fetch): Promise<ShipInYard[]> => {
   return await (await fetch_(END_POINT)).json();
 };
