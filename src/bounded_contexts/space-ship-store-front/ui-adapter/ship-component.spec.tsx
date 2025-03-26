@@ -65,7 +65,7 @@ describe("Ship", () => {
     const { queryByTestId } = render(<ShipComponent ship={shipWithoutMillage} persistClapInc={vi.fn()} />);
     expect(queryByTestId("ship-mileage")).not.toBeInTheDocument();
   });
-  it.only("renders no mileage for ships that do not have mileage", () => {
+  it("renders no mileage for ships that do not have mileage", () => {
     const shipWithoutMillage: SpaceShip = {
       id: "27",
       name: "XV-1 Turbo Alpha",
@@ -76,8 +76,7 @@ describe("Ship", () => {
       constructionYear: 3451,
     };
 
-    const { queryByTestId, debug } = render(<ShipComponent ship={shipWithoutMillage} persistClapInc={vi.fn()} />);
-    debug();
+    const { queryByTestId } = render(<ShipComponent ship={shipWithoutMillage} persistClapInc={vi.fn()} />);
     expect(queryByTestId("ship-mileage")).not.toBeInTheDocument();
   });
   it("renders no speed for ships that do not have speed", () => {
