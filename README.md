@@ -1,10 +1,17 @@
 # Hexa-Space
+
 ## Getting Started
 
 First checkout the repository and run the following command to install dependencies:
 
 ```bash
 npm install
+```
+
+Run tests. Currently, they will fail for the first time but if you run them again they will work.
+
+```bash
+npm run test
 ```
 
 Then, run the development server:
@@ -15,12 +22,12 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-
 ## Exercises 1: May the 4th be with you
 
 Goal of this exercise is to show space-ships that are on sale.
 
-Hint: There is an example for a styled sales label in line `src/bounded_contexts/space-ship-store-front/ui-adapter/ship-component.tsx:49` you can use to display the sales label.
+Hint: There is an example for a styled sales label in line
+`src/bounded_contexts/space-ship-store-front/ui-adapter/ship-component.tsx:49` you can use to display the sales label.
 
 ### Step 1
 
@@ -38,10 +45,10 @@ The customer does not have to pay an interest rate if the space-ship is on sale.
 
 The sales banner and the price reduction should also apply on May the 4th on all products.
 
-
 ## Exercise 2: An elegant Weapon for a more civilized age
 
-Goal of this exercise is to calculate the weapon power for the weapon inventory. If the imperial controller appear, you have to have a list of your weapons and weapon power ready.
+Goal of this exercise is to calculate the weapon power for the weapon inventory. If the imperial controller appear, you
+have to have a list of your weapons and weapon power ready.
 
 ### Step 1
 
